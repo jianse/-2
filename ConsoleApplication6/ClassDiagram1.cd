@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bean">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAI=</HashCode>
+      <FileName>Bean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserBean">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQQAAAAAAAAAAASEAAAAAAAAAAAAgAgAAAAA=</HashCode>
+      <FileName>UserBean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentBean">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>StudentBean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SubjectBean">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubjectBean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherBean">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TeacherBean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Student">
+    <Position X="2" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACRAAAAAAAQAAQEAAAAAAAEAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleApplication6.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Studentmassage">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIMAAAAAABIAAAAAQAQgAgAAJAAgkAAAABAEBAAA=</HashCode>
+      <FileName>ConsoleApplication6.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="File">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIEAAAAAAAAAAAAACAAAAAAAECAAAAIAAAAAAAAA=</HashCode>
+      <FileName>File.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
