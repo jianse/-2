@@ -17,21 +17,21 @@
   <Class Name="StudentBean">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>QAEAAAAAAAAAAAAAEgQgAQAAAAAEAAAAAAAgAAAAAgA=</HashCode>
       <FileName>StudentBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SubjectBean">
     <Position X="4.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABEBAAAAAAAAAAAAIEAAAAAAAABEAAAAAAAAAAABAAA=</HashCode>
       <FileName>SubjectBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherBean">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAIAQAAAAYAAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>TeacherBean.h</FileName>
     </TypeIdentifier>
   </Class>

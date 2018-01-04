@@ -9,11 +9,12 @@ class File
 {
 public:
 	File(string path);
+	ifstream in;
+	ofstream out;
 	bool close();
 	~File();
 private:
 	string path;
-	ifstream in;
-	ofstream out;
+	
 };
 
