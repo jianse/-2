@@ -5,8 +5,8 @@
 File::File(string path)
 {
 	File::path = path;
-	in.open(path, ios_base::binary);
-	out.open(path, ios_base::binary);
+	in.open(path, ios_base::binary|ios_base::app);
+	out.open(path, ios_base::binary|ios_base::app);
 }
 
 bool File::close()

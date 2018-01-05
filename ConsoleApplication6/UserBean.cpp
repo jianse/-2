@@ -23,11 +23,21 @@ bool UserBean::operator==(UserBean & u2)
 	}
 }
 
+bool UserBean::operator==(Bean & b2)
+{
+	return false;
+}
+
 UserBean &UserBean::operator=(UserBean & u2)
 {
 	username = u2.username;
 	password = u2.password;
 	rank = u2.rank;
+	return *this;
+}
+
+Bean & UserBean::operator=(Bean & b2)
+{
 	return *this;
 }
 

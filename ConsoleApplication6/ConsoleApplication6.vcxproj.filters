@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\logic">
+      <UniqueIdentifier>{0d7c025a-0564-4dee-a6b9-3bfa08ebb80f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ui">
+      <UniqueIdentifier>{c4146d42-e719-49b9-9b75-e2b29193bbc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\logic">
+      <UniqueIdentifier>{32edb05d-e1ab-4636-a236-bdc81119f48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ui">
+      <UniqueIdentifier>{08a50a5e-52b4-421f-8c3b-202c3f4c58cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\logic\bean">
+      <UniqueIdentifier>{9f7f6803-7edb-4491-9fb5-6cb89f4a0d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\logic\bean">
+      <UniqueIdentifier>{73df525e-784a-4917-bcce-1e2fbabadf6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,26 +42,41 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Bean.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="Form.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
-    <ClInclude Include="File.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="LoginForm.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
-    <ClInclude Include="UserBean.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="AdminForm.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
-    <ClInclude Include="StudentBean.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="StudentForm.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
-    <ClInclude Include="SubjectBean.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TeacherBean.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="TeacherForm.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
     <ClInclude Include="Date.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>头文件\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Bean.h">
+      <Filter>头文件\logic\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentBean.h">
+      <Filter>头文件\logic\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="SubjectBean.h">
+      <Filter>头文件\logic\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="TeacherBean.h">
+      <Filter>头文件\logic\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="UserBean.h">
+      <Filter>头文件\logic\bean</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,23 +86,38 @@
     <ClCompile Include="ConsoleApplication6.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="File.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Date.cpp">
+      <Filter>源文件\logic</Filter>
     </ClCompile>
-    <ClCompile Include="UserBean.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="File.cpp">
+      <Filter>源文件\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm.cpp">
+      <Filter>源文件\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Form.cpp">
+      <Filter>源文件\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginForm.cpp">
+      <Filter>源文件\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentForm.cpp">
+      <Filter>源文件\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="TeacherForm.cpp">
+      <Filter>源文件\ui</Filter>
     </ClCompile>
     <ClCompile Include="StudentBean.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\logic\bean</Filter>
     </ClCompile>
     <ClCompile Include="SubjectBean.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\logic\bean</Filter>
     </ClCompile>
     <ClCompile Include="TeacherBean.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\logic\bean</Filter>
     </ClCompile>
-    <ClCompile Include="Date.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="UserBean.cpp">
+      <Filter>源文件\logic\bean</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
