@@ -8,6 +8,8 @@ public:
 	~TeacherBean();
 	bool operator==(TeacherBean &t2);
 	TeacherBean & operator=(TeacherBean &t2);
+	bool operator== (Bean &b2);
+	Bean &operator=(Bean &b2);
 private:
 	string id;		//教师id
 	string name;	//教师姓名

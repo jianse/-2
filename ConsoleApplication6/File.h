@@ -12,9 +12,9 @@ public:
 	ifstream in;
 	ofstream out;
 	bool close();
+	bool isempty();
 	~File();
 private:
 	string path;
-	
 };
 

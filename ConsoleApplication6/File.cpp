@@ -5,8 +5,8 @@
 File::File(string path)
 {
 	File::path = path;
-	in.open(path, ios_base::binary|ios_base::app);
-	out.open(path, ios_base::binary|ios_base::app);
+	in.open(path, ios_base::app);
+	out.open(path, ios_base::app);
 }
 
 bool File::close()
@@ -18,6 +18,18 @@ bool File::close()
 		return true;
 	}
 	return true;
+}
+
+bool File::isempty()
+{
+	string str;
+	in >> str;
+	if (str.empty())
+	{
+		return true;
+	}
+	in.seekg(-(int)str.size(), std::ios::cur);
+	return false;
 }
 
 File::~File()

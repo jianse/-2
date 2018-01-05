@@ -32,3 +32,13 @@ TeacherBean & TeacherBean::operator=(TeacherBean & t2)
 	this->description = t2.description;
 	return *this;
 }
+
+bool TeacherBean::operator==(Bean & b2)
+{
+	return false;
+}
+
+Bean & TeacherBean::operator=(Bean & b2)
+{
+	return *this;
+}

@@ -34,3 +34,13 @@ SubjectBean & SubjectBean::operator=(SubjectBean & s2)
 	this->description = s2.description;
 	return *this;
 }
+
+bool SubjectBean::operator==(Bean & b2)
+{
+	return false;
+}
+
+Bean & SubjectBean::operator=(Bean & b2)
+{
+	return *this;
+}

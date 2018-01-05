@@ -6,6 +6,13 @@ UserBean::UserBean()
 {
 }
 
+UserBean::UserBean(string username, string password)
+{
+	UserBean::username = username;
+	UserBean::password = password;
+	UserBean::rank = 5;
+}
+
 
 UserBean::~UserBean()
 {
@@ -40,6 +47,34 @@ Bean & UserBean::operator=(Bean & b2)
 {
 	return *this;
 }
+
+bool UserBean::ispass(UserBean & u2)
+{
+	if ((this->username == u2.username) && (this->password == u2.password))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+string UserBean::getname()
+{
+	return username;
+}
+
+void UserBean::setrank(int rank)
+{
+	UserBean::rank = rank;
+}
+
+int UserBean::getrank()
+{
+	return rank;
+}
+
 
 istream & operator >> (istream & is, UserBean & data)
 {

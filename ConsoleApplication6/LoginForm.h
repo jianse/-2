@@ -11,7 +11,11 @@ public:
 	~LoginForm();
 	void show();
 private:
-	bool login();
+	void login();
+	void setadmin();
+	void showadminform(UserBean user);
+	void showteacherform(UserBean user);
+	void showstudentform(UserBean user);
 	string menu = 
 		"==========================================  \n \
 Welcome please login: \n\

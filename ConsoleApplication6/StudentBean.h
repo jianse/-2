@@ -10,6 +10,8 @@ public:
 	~StudentBean();
 	bool operator==(StudentBean &s2);
 	StudentBean & operator=(StudentBean &s2);
+	bool operator== (Bean &b2);
+	Bean &operator=(Bean &b2);
 private:
 
 	string id;			//Ñ§Éúid
