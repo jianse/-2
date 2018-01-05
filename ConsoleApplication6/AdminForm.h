@@ -9,6 +9,12 @@ public:
 	~AdminForm();
 	void show();
 private:
-	UserBean user;
+	void showmenu();
+	char waitakey();
+	void showadminmanage();
+	void showteachermanage();
+	void showstudentmanage();
+	void showcoursemanage();
+	UserBean user; 
 };
 

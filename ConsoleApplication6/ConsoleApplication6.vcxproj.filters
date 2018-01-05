@@ -31,6 +31,9 @@
     <Filter Include="头文件\logic\bean">
       <UniqueIdentifier>{73df525e-784a-4917-bcce-1e2fbabadf6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\ui\forms">
+      <UniqueIdentifier>{2220f167-2642-4ae9-8ac2-857a56b65bab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -78,6 +81,9 @@
     <ClInclude Include="UserBean.h">
       <Filter>头文件\logic\bean</Filter>
     </ClInclude>
+    <ClInclude Include="AdminManageForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -92,21 +98,6 @@
     <ClCompile Include="File.cpp">
       <Filter>源文件\logic</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm.cpp">
-      <Filter>源文件\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="Form.cpp">
-      <Filter>源文件\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="LoginForm.cpp">
-      <Filter>源文件\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="StudentForm.cpp">
-      <Filter>源文件\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="TeacherForm.cpp">
-      <Filter>源文件\ui</Filter>
-    </ClCompile>
     <ClCompile Include="StudentBean.cpp">
       <Filter>源文件\logic\bean</Filter>
     </ClCompile>
@@ -118,6 +109,24 @@
     </ClCompile>
     <ClCompile Include="UserBean.cpp">
       <Filter>源文件\logic\bean</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm.cpp">
+      <Filter>源文件\ui\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="Form.cpp">
+      <Filter>源文件\ui\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginForm.cpp">
+      <Filter>源文件\ui\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentForm.cpp">
+      <Filter>源文件\ui\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="TeacherForm.cpp">
+      <Filter>源文件\ui\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminManageForm.cpp">
+      <Filter>源文件\ui\forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
