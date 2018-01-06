@@ -15,6 +15,7 @@ public:
 	bool operator==(Bean &b2);
 	UserBean &operator=(UserBean &u2);
 	Bean &operator=(Bean &b2);
+	void display();
 	bool ispass(UserBean &u2);
 	string getname();
 	void setrank(int rank);

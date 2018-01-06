@@ -1,6 +1,7 @@
 #pragma once
 #include "Form.h"
 #include "UserBean.h"
+#include "AdminManageForm.h"
 class AdminForm :
 	public Form
 {

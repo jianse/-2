@@ -48,6 +48,12 @@ Bean & UserBean::operator=(Bean & b2)
 	return *this;
 }
 
+void UserBean::display()
+{
+	cout << username;
+	cout << password;
+}
+
 bool UserBean::ispass(UserBean & u2)
 {
 	if ((this->username == u2.username) && (this->password == u2.password))

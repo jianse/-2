@@ -32,6 +32,15 @@ bool File::isempty()
 	return false;
 }
 
+bool File::recreate()
+{
+	this->close();
+	remove(path.data());
+	in.open(path, ios_base::app);
+	out.open(path, ios_base::app);
+	return true;
+}
+
 File::~File()
 {
 	this->close();

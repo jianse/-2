@@ -3,14 +3,14 @@
   <Class Name="Bean">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Bean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UserBean">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQQAAAAAAAAAAASEAAAAAAAAAAAAgAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQQAAAAAAARAABSEAAAAAAAAAAAAgAgAABAA=</HashCode>
       <FileName>UserBean.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,7 +45,7 @@
   <Class Name="LoginForm">
     <Position X="8.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAABAAAAAAAgAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>gAABAAAAACAAAABAAgAAAAgQAAAAAAAABAAAAAAAEAA=</HashCode>
       <FileName>LoginForm.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,15 +66,22 @@
   <Class Name="AdminForm">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAIACAAAAAEAAAAAAgAAAAAABABAAACABQA=</HashCode>
       <FileName>AdminForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="File">
-    <Position X="17" Y="2.25" Width="1.5" />
+    <Position X="18" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIEAAAAAAAAAAAAACAAAAAAAECAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIEAAAAAAAAAAAAACAAAAAAAECAAAAIAAAAAAQAA=</HashCode>
       <FileName>File.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdminManageForm">
+    <Position X="15.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAIAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AdminManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

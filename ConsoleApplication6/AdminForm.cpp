@@ -62,6 +62,8 @@ char AdminForm::waitakey()
 
 void AdminForm::showadminmanage()
 {
+	AdminManageForm amf;
+	amf.show();
 }
 
 void AdminForm::showteachermanage()

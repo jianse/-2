@@ -13,6 +13,7 @@ public:
 	ofstream out;
 	bool close();
 	bool isempty();
+	bool recreate();
 	~File();
 private:
 	string path;

@@ -34,6 +34,15 @@
     <Filter Include="源文件\ui\forms">
       <UniqueIdentifier>{2220f167-2642-4ae9-8ac2-857a56b65bab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\ui\forms\subforms">
+      <UniqueIdentifier>{2e538794-40f0-4eda-b12a-6b9dcd895153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ui\forms">
+      <UniqueIdentifier>{e62850a5-b734-4914-ac21-607921013159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ui\forms\subforms">
+      <UniqueIdentifier>{dd59e73a-a840-43c1-bc8b-600d7cb0b591}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -44,21 +53,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Form.h">
-      <Filter>头文件\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="LoginForm.h">
-      <Filter>头文件\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="AdminForm.h">
-      <Filter>头文件\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="StudentForm.h">
-      <Filter>头文件\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="TeacherForm.h">
-      <Filter>头文件\ui</Filter>
     </ClInclude>
     <ClInclude Include="Date.h">
       <Filter>头文件\logic</Filter>
@@ -81,8 +75,23 @@
     <ClInclude Include="UserBean.h">
       <Filter>头文件\logic\bean</Filter>
     </ClInclude>
+    <ClInclude Include="AdminForm.h">
+      <Filter>头文件\ui\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="Form.h">
+      <Filter>头文件\ui\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginForm.h">
+      <Filter>头文件\ui\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentForm.h">
+      <Filter>头文件\ui\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="TeacherForm.h">
+      <Filter>头文件\ui\forms</Filter>
+    </ClInclude>
     <ClInclude Include="AdminManageForm.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\ui\forms\subforms</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,7 +135,7 @@
       <Filter>源文件\ui\forms</Filter>
     </ClCompile>
     <ClCompile Include="AdminManageForm.cpp">
-      <Filter>源文件\ui\forms</Filter>
+      <Filter>源文件\ui\forms\subforms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
