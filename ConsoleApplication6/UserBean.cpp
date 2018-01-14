@@ -50,8 +50,8 @@ Bean & UserBean::operator=(Bean & b2)
 
 void UserBean::display()
 {
-	cout << username;
-	cout << password;
+	cout << "Username\t:" << username << endl;
+	cout << "Password\t:" << password << endl;
 }
 
 bool UserBean::ispass(UserBean & u2)

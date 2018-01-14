@@ -14,6 +14,7 @@ public:
 	SubjectBean & operator=(SubjectBean &s2);
 	bool operator== (Bean &b2);
 	Bean &operator=(Bean &b2);
+	void display();
 private:
 	string id;		//¿Î³Ìid
 	string name;	//¿Î³ÌÃû

@@ -10,6 +10,7 @@ public:
 	TeacherBean & operator=(TeacherBean &t2);
 	bool operator== (Bean &b2);
 	Bean &operator=(Bean &b2);
+	void display();
 private:
 	string id;		//教师id
 	string name;	//教师姓名

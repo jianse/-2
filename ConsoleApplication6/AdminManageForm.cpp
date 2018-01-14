@@ -76,7 +76,7 @@ select a selection and press ENTER to continue:";
 			userfile.recreate();
 			while (!users.empty())
 			{
-				userfile << users.pop_back;
+				userfile.out << users.;
 			}
 			break;
 		}
