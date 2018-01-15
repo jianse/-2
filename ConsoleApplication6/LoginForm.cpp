@@ -10,68 +10,110 @@ LoginForm::~LoginForm()
 }
 
 void LoginForm::show()
-{	
-	login();
-}
-
-void LoginForm::login()
 {
 	File userfile("user.dat");
-	bool flag = true;
-	string username, password;
-	if (userfile.isempty())
+	bool singal = true;
+	do
 	{
-		setadmin();
-	}
-	else
-	{
-		cout << menu;
-		cout << "UserName:";
-		cin >> username;
-		cout << "Password:";
-		cin >> password;
-		UserBean user(username,password), luser;
-		while (!(userfile.in.eof()))
+		vector<UserBean> users;
+		users= userfile.loadall<vector<UserBean>, UserBean>(users);
+		if (users.empty())
 		{
-			userfile.in >> luser;
-			if (user==luser)
+			setadmin();
+		}
+		else
+		{
+			bool contans = false;
+			UserBean user = getuser();
+			for (vector<UserBean>::iterator i = users.begin(), e = users.end(); i != e; i++)
 			{
-				flag = false;
-				if (user.ispass(luser))
+				if (*i == user)
 				{
-					switch (luser.getrank())
+					contans = true;
+					if (user.ispass(*i))
 					{
-					case 0:
-						showadminform(luser);
-						break;
-					case 1:
-						showteacherform(luser);
-						break;
-					case 2:
-						showstudentform(luser);
-						break;
-					default:
+						user = (*i);
+						switch (user.getrank())
+						{
+						case 0:
+							showadminform(user);
+							break;
+						case 1:
+							showteacherform(user);
+							break;
+						case 2:
+							showstudentform(user);
+							break;
+						default:
+							break;
+						}
 						break;
 					}
-					break;
-				}
-				else
-				{
-					cout << "password error" << endl;
-					break;
+					else
+					{
+						cout << "password error" << endl;
+						system("pause");
+						break;
+					}
 				}
 			}
-			
 		}
-		if (flag)
-		{
-			cout << "no such user\n";
-		}
-		
-	}
+
+	} while (singal);
 	userfile.close();
-	return;
 }
+
+//void LoginForm::login()
+//{
+//		bool flag = true;
+//		string username, password;
+//		cout << menu;
+//		cout << "UserName:";
+//		cin >> username;
+//		cout << "Password:";
+//		cin >> password;
+//		UserBean user(username,password), luser;
+//		while (!(userfile.in.eof()))
+//		{
+//			userfile.in >> luser;
+//			if (user==luser)
+//			{
+//				flag = false;
+//				if (user.ispass(luser))
+//				{
+//					switch (luser.getrank())
+//					{
+//					case 0:
+//						showadminform(luser);
+//						break;
+//					case 1:
+//						showteacherform(luser);
+//						break;
+//					case 2:
+//						showstudentform(luser);
+//						break;
+//					default:
+//						break;
+//					}
+//					break;
+//				}
+//				else
+//				{
+//					cout << "password error" << endl;
+//					break;
+//				}
+//			}
+//			
+//		}
+//		if (flag)
+//		{
+//			cout << "no such user\n";
+//		}
+//		
+//	}
+//	
+//	return;
+//}
 
 void LoginForm::setadmin()
 {
@@ -80,10 +122,23 @@ void LoginForm::setadmin()
 	cin >> pwd;
 	UserBean user("admin", pwd);
 	user.setrank(0);
+	user.setsid("0");
 	File userfile("user.dat");
-	userfile.out << user;
+	userfile.write(user);
 	userfile.close();
-	login();
+	//login();
+}
+
+UserBean LoginForm::getuser()
+{
+	string username, password;
+	cout << menu;
+	cout << "UserName:";
+	cin >> username;
+	cout << "Password:";
+	cin >> password;
+	UserBean user(username, password);
+	return user;
 }
 
 void LoginForm::showadminform(UserBean user)

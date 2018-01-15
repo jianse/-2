@@ -22,6 +22,7 @@ public:
 	 T1 &loadall(T1 &vc);
 	~File();
 private:
+	void resetpos();
 	string path;
 };
 
@@ -48,10 +49,6 @@ inline T1 & File::loadall(T1 & vc)
 	{
 		vc.push_back(temp);
 	}
-	/*do
-	{
-		this->in >> temp;
-		vc.push_back(temp);
-	}while (!(this->in.eof()));*/
+	this->resetpos();
 	return vc;
 }

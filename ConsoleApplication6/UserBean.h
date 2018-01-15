@@ -21,6 +21,7 @@ public:
 	void setrank(int rank);
 	int getrank();
 	string getsid();
+	void setsid(string sid);
 private:
 	string username;
 	string password;

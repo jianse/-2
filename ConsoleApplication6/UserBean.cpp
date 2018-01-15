@@ -87,6 +87,10 @@ string UserBean::getsid()
 	return Sid;
 }
 
+void UserBean::setsid(string sid)
+{
+	UserBean::Sid = sid;
+}
 
 istream & operator >> (istream & is, UserBean & data)
 {
@@ -96,6 +100,6 @@ istream & operator >> (istream & is, UserBean & data)
 
 ostream & operator<<(ostream & ou, UserBean & data)
 {
-	ou << setw(12)<< data.username << setw(18) << data.password << setw(2) << data.rank << setw(12) << data.Sid;
+	ou << setw(12) << data.username << setw(18) << data.password << setw(2) << data.rank << setw(12) << data.Sid << endl;
 	return ou;
 }

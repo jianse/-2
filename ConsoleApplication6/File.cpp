@@ -45,3 +45,10 @@ File::~File()
 {
 	this->close();
 }
+
+void File::resetpos()
+{
+	this->close();
+	in.open(path, ios_base::app);
+	out.open(path, ios_base::app);
+}

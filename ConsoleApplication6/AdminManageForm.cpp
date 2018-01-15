@@ -37,6 +37,7 @@ select a selection and press ENTER to continue:";
 			cin >> password;
 			UserBean user(username, password), luser;
 			user.setrank(0);
+			user.setsid("0");
 			File userfile("user.dat");
 			while (!(userfile.in.eof()))
 			{

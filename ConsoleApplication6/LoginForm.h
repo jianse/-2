@@ -15,8 +15,9 @@ public:
 	~LoginForm();
 	void show();
 private:
-	void login();
+	//void login();
 	void setadmin();
+	UserBean getuser();
 	void showadminform(UserBean user);
 	void showteacherform(UserBean user);
 	void showstudentform(UserBean user);
