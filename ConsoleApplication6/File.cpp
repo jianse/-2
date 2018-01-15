@@ -32,6 +32,14 @@ bool File::isempty()
 	return false;
 }
 
+
+void File::resetpos()
+{
+	this->close();
+	in.open(path, ios_base::app);
+	out.open(path, ios_base::app);
+}
+
 bool File::recreate()
 {
 	this->close();
@@ -46,9 +54,3 @@ File::~File()
 	this->close();
 }
 
-void File::resetpos()
-{
-	this->close();
-	in.open(path, ios_base::app);
-	out.open(path, ios_base::app);
-}
