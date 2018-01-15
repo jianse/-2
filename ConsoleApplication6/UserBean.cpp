@@ -40,6 +40,7 @@ UserBean &UserBean::operator=(UserBean & u2)
 	username = u2.username;
 	password = u2.password;
 	rank = u2.rank;
+	Sid = u2.Sid;
 	return *this;
 }
 

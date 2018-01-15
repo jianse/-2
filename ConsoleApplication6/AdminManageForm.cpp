@@ -38,8 +38,20 @@ select a selection and press ENTER to continue:";
 			UserBean user(username, password), luser;
 			user.setrank(0);
 			user.setsid("0");
+			vector<UserBean> users;
 			File userfile("m_user.dat");
-			while (!(userfile.in.eof()))
+			users = userfile.loadall<vector<UserBean>, UserBean>(users);
+			for (vector<UserBean>::iterator i = users.begin(), e = users.end(); i != e; i++)
+			{
+				if (*i == user)
+				{
+					saveable = false;
+					cout << "already exsit!" << endl;
+					system("pause");
+					break;
+				}
+			}
+			/*while (!(userfile.in.eof()))
 			{
 				userfile.in >> luser;
 				if (user == luser)
@@ -50,10 +62,12 @@ select a selection and press ENTER to continue:";
 					system("pause");
 					break;
 				}
-			}
+			}*/
 			if (saveable)
 			{
-				userfile.out << user;
+				userfile.write(user);
+				cout << "success!" << endl;
+				system("pause");
 			}
 			break;
 		}
@@ -73,8 +87,7 @@ select a selection and press ENTER to continue:";
 					users.erase(i);
 				}
 			}
-			userfile.recreate();
-			userfile.write<vector<UserBean>, UserBean>(users);
+			userfile.override<vector<UserBean>, UserBean>(users);
 			break;
 		}
 			
@@ -94,6 +107,7 @@ select a selection and press ENTER to continue:";
 				{
 					i->display();
 					found = true;
+					break;
 				}
 			}
 			if (!found)

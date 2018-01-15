@@ -48,25 +48,32 @@ select a selection and press ENTER to continue:";
 			break;
 		case '1':
 			m_info.display();
+			system("pause");
 			break;
 		case '2':
 			editminfo();
+			system("pause");
 			break;
 		case '3':
 			changepassword();
+			system("pause");
 			break;
 		case '4':
 			loadcourses();
+			system("pause");
 			break;
 		case '5':
-			selectcorse();
+			selectcorse(); 
+			system("pause");
 			break;
 		case '6':
 			return;
 			break;
 		default:
-			system("cls");
+			
 			cout << "undifined selection please retry" << endl;
+			system("pause");
+			system("cls");
 			showmenu();
 			break;
 		}
@@ -99,15 +106,16 @@ void StudentForm::changepassword()
 	File userfile("m_user.dat");
 	vector<UserBean> users;
 	users = userfile.loadall<vector<UserBean>, UserBean>(users);
+	userfile.close();
 	for (vector<UserBean>::iterator i = users.begin(), e = users.end(); i != e; i++)
 	{
 		if ((*i) == user)
 		{
 			*i = user;
+			break;
 		}
 	}
-	userfile.recreate();
-	userfile.write<vector<UserBean>,UserBean>(users);
+	userfile.override<vector<UserBean>,UserBean>(users);
 }
 
 void StudentForm::selectcorse()
@@ -163,8 +171,8 @@ void StudentForm::addcouse(string cid)
 			break;
 		}
 	}
-	studentfile.recreate();
-	studentfile.write<vector<StudentBean>, StudentBean>(students);
+	
+	studentfile.override<vector<StudentBean>, StudentBean>(students);
 }
 
 void StudentForm::loadcourses()

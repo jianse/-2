@@ -9,11 +9,11 @@ class File
 {
 public:
 	File(string path);
-	ifstream in;
-	ofstream out;
+	
 	bool close();
 	bool isempty();
-	bool recreate();
+	template<typename V, typename B>
+	void override(V data);
 	template<typename V, typename B>
 	void write(V data);
 	template<typename B>
@@ -22,9 +22,22 @@ public:
 	 T1 &loadall(T1 &vc);
 	~File();
 private:
+	ifstream in;
+	ofstream out;
 	void resetpos();
 	string path;
 };
+
+template<typename V, typename B>
+inline void File::override(V data)
+{
+	out.close();
+	out.open(path, ios_base::trunc);
+	for (vector<B>::iterator i = data.begin(), end = data.end(); i != end; ++i)
+	{
+		this->out << (*i);
+	}
+}
 
 template<typename V,typename B>
 inline void File::write(V data)
