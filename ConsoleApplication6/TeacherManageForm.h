@@ -7,5 +7,7 @@ public:
 	TeacherManageForm();
 	~TeacherManageForm();
 	void show();
+private:
+	char waitakey();
 };
 

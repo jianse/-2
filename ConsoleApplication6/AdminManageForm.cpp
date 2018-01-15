@@ -106,6 +106,8 @@ select a selection and press ENTER to continue:";
 			return;
 			break;
 		default:
+			cout << "undifined selection please retry" << endl;
+			system("pause");
 			break;
 		}
 	}
