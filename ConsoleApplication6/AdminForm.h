@@ -2,6 +2,8 @@
 #include "Form.h"
 #include "UserBean.h"
 #include "AdminManageForm.h"
+#include "TeacherManageForm.h"
+
 class AdminForm :
 	public Form
 {

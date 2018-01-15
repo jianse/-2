@@ -76,6 +76,8 @@ void AdminForm::showadminmanage()
 
 void AdminForm::showteachermanage()
 {
+	TeacherManageForm tmf;
+	tmf.show();
 }
 
 void AdminForm::showstudentmanage()

@@ -99,6 +99,7 @@ select a selection and press ENTER to continue:";
 			{
 				cout << "not found" << endl;
 			}
+			system("pause");
 			break;
 		}
 			

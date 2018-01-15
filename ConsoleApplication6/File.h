@@ -44,10 +44,14 @@ template<typename T1, typename T2>
 inline T1 & File::loadall(T1 & vc)
 {
 	T2 temp;
-	while (!(this->in.eof()))
+	while (this->in >> temp)
+	{
+		vc.push_back(temp);
+	}
+	/*do
 	{
 		this->in >> temp;
 		vc.push_back(temp);
-	}
+	}while (!(this->in.eof()));*/
 	return vc;
 }
