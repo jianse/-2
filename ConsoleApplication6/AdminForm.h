@@ -4,6 +4,7 @@
 #include "AdminManageForm.h"
 #include "TeacherManageForm.h"
 #include "StudentManageForm.h"
+#include "CourseManageForm.h"
 
 class AdminForm :
 	public Form

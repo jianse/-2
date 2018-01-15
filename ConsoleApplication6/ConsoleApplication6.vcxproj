@@ -148,6 +148,7 @@
     <ClInclude Include="AdminForm.h" />
     <ClInclude Include="AdminManageForm.h" />
     <ClInclude Include="Bean.h" />
+    <ClInclude Include="CourseManageForm.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Form.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="AdminManageForm.cpp" />
     <ClCompile Include="ConsoleApplication6.cpp" />
+    <ClCompile Include="CourseManageForm.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="Form.cpp" />

@@ -88,5 +88,6 @@ void AdminForm::showstudentmanage()
 
 void AdminForm::showcoursemanage()
 {
-
+	CourseManageForm cmf;
+	cmf.show();
 }
