@@ -8,6 +8,7 @@ class StudentBean :
 {
 public:
 	StudentBean();
+	StudentBean(string id, string name, string gender, string classNO);
 	~StudentBean();
 	friend istream &operator >> (istream& is, StudentBean &data);
 	friend ostream &operator << (ostream& ou, StudentBean &data);
@@ -22,7 +23,7 @@ private:
 
 	string id;			//学生id
 	string name;		//学生姓名
-	string sex;			//学生性别
+	string gender;			//学生性别
 	string classNO;		//班级
 	int subjectcount;	//课程数
 	map<string ,double> subjectsidandscore;		//课程id
