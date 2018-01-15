@@ -11,7 +11,7 @@ LoginForm::~LoginForm()
 
 void LoginForm::show()
 {
-	File userfile("user.dat");
+	File userfile("m_user.dat");
 	bool singal = true;
 	do
 	{
@@ -63,58 +63,6 @@ void LoginForm::show()
 	userfile.close();
 }
 
-//void LoginForm::login()
-//{
-//		bool flag = true;
-//		string username, password;
-//		cout << menu;
-//		cout << "UserName:";
-//		cin >> username;
-//		cout << "Password:";
-//		cin >> password;
-//		UserBean user(username,password), luser;
-//		while (!(userfile.in.eof()))
-//		{
-//			userfile.in >> luser;
-//			if (user==luser)
-//			{
-//				flag = false;
-//				if (user.ispass(luser))
-//				{
-//					switch (luser.getrank())
-//					{
-//					case 0:
-//						showadminform(luser);
-//						break;
-//					case 1:
-//						showteacherform(luser);
-//						break;
-//					case 2:
-//						showstudentform(luser);
-//						break;
-//					default:
-//						break;
-//					}
-//					break;
-//				}
-//				else
-//				{
-//					cout << "password error" << endl;
-//					break;
-//				}
-//			}
-//			
-//		}
-//		if (flag)
-//		{
-//			cout << "no such user\n";
-//		}
-//		
-//	}
-//	
-//	return;
-//}
-
 void LoginForm::setadmin()
 {
 	string pwd;
@@ -123,7 +71,7 @@ void LoginForm::setadmin()
 	UserBean user("admin", pwd);
 	user.setrank(0);
 	user.setsid("0");
-	File userfile("user.dat");
+	File userfile("m_user.dat");
 	userfile.write(user);
 	userfile.close();
 	//login();

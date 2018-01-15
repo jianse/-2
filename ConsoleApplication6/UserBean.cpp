@@ -72,6 +72,11 @@ string UserBean::getname()
 	return username;
 }
 
+void UserBean::setpassword(string npass)
+{
+	password = npass;
+}
+
 void UserBean::setrank(int rank)
 {
 	UserBean::rank = rank;

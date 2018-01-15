@@ -18,6 +18,7 @@ public:
 	void display();
 	bool ispass(UserBean &u2);
 	string getname();
+	void setpassword(string npass);
 	void setrank(int rank);
 	int getrank();
 	string getsid();

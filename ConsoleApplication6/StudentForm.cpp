@@ -50,11 +50,13 @@ select a selection and press ENTER to continue:";
 			m_info.display();
 			break;
 		case '2':
-
+			editminfo();
 			break;
 		case '3':
+			changepassword();
 			break;
 		case '4':
+			selectcorse();
 			break;
 		case '5':
 			break;
@@ -76,4 +78,36 @@ char StudentForm::waitakey()
 	char ch;
 	cin >> ch;
 	return ch;
+}
+
+void StudentForm::editminfo()
+{
+	cout << "Buiding..." << endl;
+	// TODO: add edit my info
+	system("pause");
+}
+
+void StudentForm::changepassword()
+{
+	string pass;
+	cout << "Please input new password:";
+	cin >> pass;
+	user.setpassword(pass);
+	File userfile("m_user.dat");
+	vector<UserBean> users;
+	users = userfile.loadall<vector<UserBean>, UserBean>(users);
+	for (vector<UserBean>::iterator i = users.begin(), e = users.end(); i != e; i++)
+	{
+		if ((*i) == user)
+		{
+			*i = user;
+		}
+	}
+	userfile.recreate();
+	userfile.write<vector<UserBean>,UserBean>(users);
+}
+
+void StudentForm::selectcorse()
+{
+
 }

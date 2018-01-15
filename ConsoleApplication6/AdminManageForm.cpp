@@ -38,7 +38,7 @@ select a selection and press ENTER to continue:";
 			UserBean user(username, password), luser;
 			user.setrank(0);
 			user.setsid("0");
-			File userfile("user.dat");
+			File userfile("m_user.dat");
 			while (!(userfile.in.eof()))
 			{
 				userfile.in >> luser;
@@ -62,7 +62,7 @@ select a selection and press ENTER to continue:";
 			string username;
 			cout << "Please input username will be deleted:";
 			cin >> username;
-			File userfile("user.dat");
+			File userfile("m_user.dat");
 			vector<UserBean> users;
 			UserBean user(username,"0"),luser;
 			users = userfile.loadall<vector<UserBean>, UserBean>(users);
@@ -84,7 +84,7 @@ select a selection and press ENTER to continue:";
 			string username;
 			cout << "Please input username:";
 			cin >> username;
-			File userfile("user.dat");
+			File userfile("m_user.dat");
 			UserBean user(username, "0"), luser;
 			vector<UserBean> users;
 			users = userfile.loadall<vector<UserBean>, UserBean>(users);

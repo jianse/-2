@@ -14,6 +14,9 @@ public:
 private:
 	void showmenu();
 	char waitakey();
+	void editminfo();
+	void changepassword();
+	void selectcorse();
 	UserBean user;
 	StudentBean m_info;
 };
