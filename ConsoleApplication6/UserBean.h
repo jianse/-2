@@ -20,9 +20,11 @@ public:
 	string getname();
 	void setrank(int rank);
 	int getrank();
+	string getsid();
 private:
 	string username;
 	string password;
+	string Sid;
 	int rank;
 };
 

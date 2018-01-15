@@ -1,5 +1,6 @@
 #pragma once
 #include "Form.h"
+#include "UserBean.h"
 class TeacherManageForm :
 	public Form
 {
@@ -9,5 +10,6 @@ public:
 	void show();
 private:
 	char waitakey();
+	
 };
 

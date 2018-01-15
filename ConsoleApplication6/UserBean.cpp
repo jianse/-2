@@ -52,6 +52,7 @@ void UserBean::display()
 {
 	cout << "Username\t:" << username << endl;
 	cout << "Password\t:" << password << endl;
+	cout << "Sid\t:" << Sid << endl;
 }
 
 bool UserBean::ispass(UserBean & u2)
@@ -81,15 +82,20 @@ int UserBean::getrank()
 	return rank;
 }
 
+string UserBean::getsid()
+{
+	return Sid;
+}
+
 
 istream & operator >> (istream & is, UserBean & data)
 {
-	is >> setw(12) >> data.username >> setw(18) >> data.password >> setw(2) >> data.rank;
+	is >> setw(12) >> data.username >> setw(18) >> data.password >> setw(2) >> data.rank>> setw(12)>>data.Sid;
 	return is;
 }
 
 ostream & operator<<(ostream & ou, UserBean & data)
 {
-	ou << setw(12)<< data.username << setw(18) << data.password << setw(2) << data.rank << endl;
+	ou << setw(12)<< data.username << setw(18) << data.password << setw(2) << data.rank << setw(12) << data.Sid;
 	return ou;
 }

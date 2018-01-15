@@ -4,8 +4,8 @@
 
 TeacherManageForm::TeacherManageForm()
 {
+	
 }
-
 
 TeacherManageForm::~TeacherManageForm()
 {
