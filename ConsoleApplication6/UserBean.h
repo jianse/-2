@@ -9,8 +9,8 @@ public:
 	UserBean();
 	UserBean(string username, string password);
 	~UserBean();
-	friend istream &operator >> (istream &is,UserBean &data);
-	friend ostream &operator << (ostream & ou,UserBean &data);
+	friend istream &operator >> (istream & is, UserBean &data);
+	friend ostream &operator << (ostream & ou, UserBean &data);
 	bool operator==(UserBean &u2);
 	bool operator==(Bean &b2);
 	UserBean &operator=(UserBean &u2);

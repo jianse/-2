@@ -14,6 +14,17 @@ StudentForm::~StudentForm()
 
 void StudentForm::show()
 {
+	File studentfile("m_stu.dat");
+	vector<StudentBean> students;
+	students = studentfile.loadall<vector<StudentBean>, StudentBean>(students);
+	studentfile.close();
+	for (vector<StudentBean>::iterator i = students.begin(), e = students.end(); i != e; i++)
+	{
+		if (i->getid() == StudentForm::user.getsid())
+		{
+			m_info = (*i);
+		}
+	}
 	system("cls");
 	cout << "Welcome " << user.getname() << endl;
 	showmenu();
@@ -27,7 +38,7 @@ void StudentForm::showmenu()
 2. edit my info\n\
 3. change password\n\
 4. explorer score\n\
-5. select score\n\
+5. select corse\n\
 6. return\n\
 0. exit \n\
 select a selection and press ENTER to continue:"; 
@@ -36,9 +47,10 @@ select a selection and press ENTER to continue:";
 		case '0':
 			break;
 		case '1':
-
+			m_info.display();
 			break;
 		case '2':
+
 			break;
 		case '3':
 			break;

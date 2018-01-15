@@ -10,14 +10,14 @@
   <Class Name="UserBean">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQQAAAAAAARAABSEAAAEAAAAAAAAgAgAABAA=</HashCode>
+      <HashCode>AAAAAAAAQQAAAAAAAVAEBSEAAAEAAAAAAAAgAgQABAA=</HashCode>
       <FileName>UserBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentBean">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAEAAAAAAAAAAAAAEgQgAQAAAAAEAAAAAAAgAAAAAgA=</HashCode>
+      <HashCode>QAEAAAAAAAAAAAAAEgQgAQAAAAEEAAAAAAAgAAIAAgA=</HashCode>
       <FileName>StudentBean.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,35 +36,35 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Form">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="11.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAEAAAA=</HashCode>
       <FileName>Form.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LoginForm">
-    <Position X="8" Y="2.5" Width="1.5" />
+    <Position X="8.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAABAAAAACAAAABAAgAAAAgQAAAAAAAABAAAAAAAEAA=</HashCode>
+      <HashCode>gAABAAAAACAAAABAAgAAAAgQAAAAAAAAFAAAAAAAAAA=</HashCode>
       <FileName>LoginForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherForm">
-    <Position X="12" Y="2.5" Width="1.5" />
+    <Position X="12.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAEAQA=</HashCode>
       <FileName>TeacherForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentForm">
-    <Position X="14" Y="2.5" Width="1.5" />
+    <Position X="14.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAABCAAAACAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAABCAAAACABQA=</HashCode>
       <FileName>StudentForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AdminForm">
-    <Position X="10" Y="2.5" Width="1.5" />
+    <Position X="10.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAIACAAAAAEAAAAAAgAAAAAABABAAACABQA=</HashCode>
       <FileName>AdminForm.h</FileName>
@@ -73,25 +73,25 @@
   <Class Name="File">
     <Position X="18" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIEAAAAAAAAAAAAACAAABAAAECAIAAYAAAAAAQAA=</HashCode>
+      <HashCode>AAAAIEAAAAAAAAAAAAACAAEBAAAECAIAAYAAAAAAQAA=</HashCode>
       <FileName>File.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AdminManageForm">
-    <Position X="15" Y="6.25" Width="1.5" />
+    <Position X="15.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAIAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>AdminManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CourseManageForm">
-    <Position X="11" Y="6.25" Width="1.5" />
+    <Position X="11.5" Y="6.25" Width="1.5" />
     <InheritanceLine Type="Form" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="11.5" Y="1.94" />
-        <Point X="11.5" Y="2.2" />
-        <Point X="11.75" Y="2.2" />
-        <Point X="11.75" Y="6.25" />
+        <Point X="12.5" Y="1.94" />
+        <Point X="12.5" Y="2.2" />
+        <Point X="12.25" Y="2.2" />
+        <Point X="12.25" Y="6.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -100,14 +100,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="StudentManageForm">
-    <Position X="9" Y="6.25" Width="1.5" />
+    <Position X="9.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAgAAAAAABAAAAAQAAAA=</HashCode>
       <FileName>StudentManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherManageForm">
-    <Position X="13" Y="6.25" Width="1.5" />
+    <Position X="13.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABCAAAAAAAAA=</HashCode>
       <FileName>TeacherManageForm.h</FileName>

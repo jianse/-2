@@ -1,6 +1,8 @@
 #pragma once
 #include "Form.h"
 #include "UserBean.h"
+#include <vector>
+#include "StudentBean.h"
 
 class StudentForm :
 	public Form
@@ -13,5 +15,6 @@ private:
 	void showmenu();
 	char waitakey();
 	UserBean user;
+	StudentBean m_info;
 };
 
