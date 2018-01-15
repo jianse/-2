@@ -29,6 +29,9 @@ select a selection and press ENTER to continue:";
 		case '0':
 			break;
 		case '1':
+			system("cls");
+			addastudent();
+			
 			break;
 		case '2':
 			break;
@@ -49,5 +52,50 @@ select a selection and press ENTER to continue:";
 
 char StudentManageForm::waitakey()
 {
-	return 0;
+	char ch;
+	cin >> ch;
+	return ch;
+}
+
+void StudentManageForm::addastudent()
+{
+	bool saveable = true;
+	string id, name, gender, classNO;
+	cout << "id:";
+	cin >> id;
+	cout << "name:";
+	cin >> name;
+	cout << "gender:";
+	cin >> gender;
+	cout << "calssNO:";
+	cin >> classNO;
+
+	StudentBean stu(id, name, gender, classNO);
+	UserBean u(id, "123456");
+	u.setrank(2);
+	u.setsid(id);
+	File userfile("m_user.dat");
+	vector<UserBean> vu;
+	vu = userfile.loadall<vector<UserBean>, UserBean>(vu);
+	userfile.close();
+	for (vector<UserBean>::iterator i = vu.begin(), e = vu.end(); i != e; i++)
+	{
+		if (i->getname() == id)
+		{
+			saveable = false;
+			cout << "already exsit!" << endl;
+			system("pause");
+			break;
+		}
+	}
+	if (saveable)
+	{
+		File user("m_user.dat");
+		user.write(u);
+		File studentsfile("m_stu.dat");
+		studentsfile.write(stu);
+		cout << "success!" << endl;
+		system("pause");
+	}
+
 }
