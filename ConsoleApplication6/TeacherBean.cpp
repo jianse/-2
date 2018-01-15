@@ -42,3 +42,12 @@ Bean & TeacherBean::operator=(Bean & b2)
 {
 	return *this;
 }
+
+void TeacherBean::display()
+{
+	cout << "id\t:" << TeacherBean::id << endl;
+	cout << "name\t:" << TeacherBean::name << endl;
+	cout << "depatrtent\t:" << TeacherBean::department << endl;
+	cout << "sex\t:" << TeacherBean::sex << endl;
+	cout << "memo\t:" << TeacherBean::description << endl;
+}

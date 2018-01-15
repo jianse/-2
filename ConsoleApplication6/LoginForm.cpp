@@ -17,7 +17,7 @@ void LoginForm::show()
 void LoginForm::login()
 {
 	File userfile("user.dat");
-	
+	bool flag = true;
 	string username, password;
 	if (userfile.isempty())
 	{
@@ -36,6 +36,7 @@ void LoginForm::login()
 			userfile.in >> luser;
 			if (user==luser)
 			{
+				flag = false;
 				if (user.ispass(luser))
 				{
 					switch (luser.getrank())
@@ -62,7 +63,11 @@ void LoginForm::login()
 			}
 			
 		}
-		cout << "no such user\n";
+		if (flag)
+		{
+			cout << "no such user\n";
+		}
+		
 	}
 	userfile.close();
 	return;

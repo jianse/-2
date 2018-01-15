@@ -159,6 +159,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TeacherBean.h" />
     <ClInclude Include="TeacherForm.h" />
+    <ClInclude Include="TeacherManageForm.h" />
     <ClInclude Include="UserBean.h" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +181,7 @@
     <ClCompile Include="SubjectBean.cpp" />
     <ClCompile Include="TeacherBean.cpp" />
     <ClCompile Include="TeacherForm.cpp" />
+    <ClCompile Include="TeacherManageForm.cpp" />
     <ClCompile Include="UserBean.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -44,3 +44,11 @@ Bean & SubjectBean::operator=(Bean & b2)
 {
 	return *this;
 }
+
+void SubjectBean::display()
+{
+	cout << "id\t:" << SubjectBean::id << endl;
+	cout << "name:\t:" << SubjectBean::name << endl;
+	cout << "teacher\t:" << endl;
+	cout << "memo\t:" << SubjectBean::description << endl;
+}

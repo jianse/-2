@@ -64,20 +64,16 @@ select a selection and press ENTER to continue:";
 			File userfile("user.dat");
 			vector<UserBean> users;
 			UserBean user(username,"0"),luser;
-			while (!(userfile.in.eof()))
+			users = userfile.loadall<vector<UserBean>, UserBean>(users);
+			for (vector<UserBean>::iterator i = users.begin(), end = users.end(); i != end; i++)
 			{
-				userfile.in >> luser;
-				if (!(user == luser))
+				if (*i == luser)
 				{
-					users.push_back(luser);
+					users.erase(i);
 				}
-				
 			}
 			userfile.recreate();
-			while (!users.empty())
-			{
-				userfile.out << users.;
-			}
+			userfile.write<vector<UserBean>, UserBean>(users);
 			break;
 		}
 			
@@ -89,16 +85,15 @@ select a selection and press ENTER to continue:";
 			cin >> username;
 			File userfile("user.dat");
 			UserBean user(username, "0"), luser;
-			while (!(userfile.in.eof()))
+			vector<UserBean> users;
+			users = userfile.loadall<vector<UserBean>, UserBean>(users);
+			for (vector<UserBean>::iterator i = users.begin(), end = users.end(); i != end; i++)
 			{
-				UserBean luser;
-				userfile.in >> luser;
-				if (user == luser)
+				if (*i == user)
 				{
+					i->display();
 					found = true;
-					luser.display();
 				}
-				break;
 			}
 			if (!found)
 			{
@@ -114,7 +109,7 @@ select a selection and press ENTER to continue:";
 			break;
 		}
 	}
-	while (true);
+	while (signal);
 }
 
 char AdminManageForm::waitakey()
