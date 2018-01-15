@@ -52,3 +52,32 @@ void SubjectBean::display()
 	cout << "teacher\t:" << endl;
 	cout << "memo\t:" << SubjectBean::description << endl;
 }
+
+string SubjectBean::getid()
+{
+	return id;
+}
+
+istream & operator >> (istream & is, SubjectBean & data)
+{
+	is >> setw(12) >> data.id >> setw(18) >> data.name >> setw(3) >> data.teachernum;
+	for (int i = 0; i < data.teachernum;i++)
+	{
+		string tid;
+		is >> setw(12) >> tid;
+		data.teachersid.push_back(tid);
+	}
+	is >> setw(3) >> data.issingal >> setw(3) >> data.length >> setw(32) >> data.description;
+	return is;
+}
+
+ostream & operator<<(ostream & ou, SubjectBean & data)
+{
+	ou << setw(12) << data.id << setw(18) << data.name << setw(3) << data.teachernum;
+	for (int i = 0; i < data.teachernum; i++)
+	{
+		ou << setw(12) <<data.teachersid[i];
+	}
+	ou << setw(3) << data.issingal << setw(3) << data.length << setw(32) << data.description;
+	return ou;
+}

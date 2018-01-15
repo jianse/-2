@@ -51,6 +51,11 @@ string StudentBean::getid()
 	return id;
 }
 
+map<string, double> & StudentBean::getscoremap()
+{
+	return this->subjectsidandscore;
+}
+
 istream & operator >> (istream & is, StudentBean & data)
 {
 	is >> setw(12) >> data.id >> setw(12) >> data.name >> setw(4) >> data.sex >> setw(10) >> data.classNO >> setw(3) >> data.subjectcount;
@@ -64,7 +69,7 @@ istream & operator >> (istream & is, StudentBean & data)
 	return is;
 }
 
-ostream & operator >> (ostream & ou, StudentBean & data)
+ostream & operator << (ostream & ou, StudentBean & data)
 {
 	ou << setw(12) << data.id << setw(12) << data.name << setw(4) << data.sex << setw(10) << data.classNO << setw(3) << data.subjectcount;
 	for (map<string,double>::iterator i = data.subjectsidandscore.begin(),e= data.subjectsidandscore.end(); i !=e; i++)

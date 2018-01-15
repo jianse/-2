@@ -56,9 +56,10 @@ select a selection and press ENTER to continue:";
 			changepassword();
 			break;
 		case '4':
-			selectcorse();
+			loadcourses();
 			break;
 		case '5':
+			selectcorse();
 			break;
 		case '6':
 			return;
@@ -82,6 +83,7 @@ char StudentForm::waitakey()
 
 void StudentForm::editminfo()
 {
+	system("cls");
 	cout << "Buiding..." << endl;
 	// TODO: add edit my info
 	system("pause");
@@ -89,6 +91,7 @@ void StudentForm::editminfo()
 
 void StudentForm::changepassword()
 {
+	system("cls");
 	string pass;
 	cout << "Please input new password:";
 	cin >> pass;
@@ -109,5 +112,65 @@ void StudentForm::changepassword()
 
 void StudentForm::selectcorse()
 {
+	system("cls");
+	bool signal = true;
+	File subjectsfile("m_sub.dat");
+	vector<SubjectBean> subjects;
+	subjects = subjectsfile.loadall<vector<SubjectBean>,SubjectBean>(subjects);
+	do{
+		for (vector<SubjectBean>::iterator i = subjects.begin(), e = subjects.end(); i != e; i++)
+		{
+			i->display();
+		}
+		string cid;
+		bool saveable = false;
+		cout << "Please input subjectid to select a course:";
+		cin >> cid;
+		for (vector<SubjectBean>::iterator i = subjects.begin(), e = subjects.end(); i != e; i++)
+		{
+			if (i->getid() == cid)
+			{
+				saveable = true;
+				addcouse(cid);
+				break;
+			}
+		}
+		if (!saveable)
+		{
+			cout << "incrrect course id" << endl;
+		}
+		cout << "0.quit anykey continue" << endl;
+		if ('0' == waitakey())
+		{
+			signal = false;
+		}
+	} while (signal);
+	
+}
+
+void StudentForm::addcouse(string cid)
+{
+	m_info.getscoremap().insert(make_pair(cid, -1));
+	
+	vector<StudentBean> students;
+	File studentfile("m_stu.dat");
+	students = studentfile.loadall<vector<StudentBean>, StudentBean>(students);
+	for (vector<StudentBean>::iterator i = students.begin(), e = students.end(); i != e; i++)
+	{
+		if (i->getid() == m_info.getid())
+		{
+			*i = m_info;
+			break;
+		}
+	}
+	studentfile.recreate();
+	studentfile.write<vector<StudentBean>, StudentBean>(students);
+}
+
+void StudentForm::loadcourses()
+{
+	vector<SubjectBean> allsubjects;
+	File subjectsFile("m_sub.dat");
+	allsubjects = subjectsFile.loadall<vector<SubjectBean>, SubjectBean>(allsubjects);
 
 }
