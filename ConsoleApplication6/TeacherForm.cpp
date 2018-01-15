@@ -10,3 +10,7 @@ TeacherForm::TeacherForm()
 TeacherForm::~TeacherForm()
 {
 }
+
+void TeacherForm::show()
+{
+}

@@ -3,14 +3,14 @@
   <Class Name="Bean">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Bean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UserBean">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQQAAAAAAARAABSEAAAAAAAAAAAAgAgAABAA=</HashCode>
+      <HashCode>AAAAAAAAQQAAAAAAARAABSEAAAEAAAAAAAAgAgAABAA=</HashCode>
       <FileName>UserBean.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,14 +24,14 @@
   <Class Name="SubjectBean">
     <Position X="4.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABEBAAAAAAAAAAAAIEAAAQAAAABEAAAAAAAgAAABAgA=</HashCode>
+      <HashCode>ABEBAAAAAAAAAAAAIEAAAQAAAAFEAAAAAAAgAAABAgA=</HashCode>
       <FileName>SubjectBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherBean">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAIAQAAQAYAAAEAAAAAAAgAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAIAQAAQAYAAEEAAAAAAAgAAAAAgA=</HashCode>
       <FileName>TeacherBean.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -43,23 +43,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LoginForm">
-    <Position X="8.25" Y="2.5" Width="1.5" />
+    <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAABAAAAACAAAABAAgAAAAgQAAAAAAAABAAAAAAAEAA=</HashCode>
       <FileName>LoginForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherForm">
-    <Position X="11.75" Y="2.5" Width="1.5" />
+    <Position X="12" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAEAAA=</HashCode>
       <FileName>TeacherForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentForm">
-    <Position X="13.5" Y="2.5" Width="1.5" />
+    <Position X="14" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAABCAAAACAAQA=</HashCode>
       <FileName>StudentForm.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,15 +73,44 @@
   <Class Name="File">
     <Position X="18" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIEAAAAAAAAAAAAACAAAAAAAECAAAAIAAAAAAQAA=</HashCode>
+      <HashCode>AAAAIEAAAAAAAAAAAAACAAABAAAECAIAAYAAAAAAQAA=</HashCode>
       <FileName>File.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AdminManageForm">
-    <Position X="15.25" Y="2.5" Width="1.5" />
+    <Position X="15" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAIAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>AdminManageForm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseManageForm">
+    <Position X="11" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Form" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="1.94" />
+        <Point X="11.5" Y="2.2" />
+        <Point X="11.75" Y="2.2" />
+        <Point X="11.75" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>CourseManageForm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentManageForm">
+    <Position X="9" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAgAAAAAABAAAAAQAAAA=</HashCode>
+      <FileName>StudentManageForm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherManageForm">
+    <Position X="13" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABCAAAAAAAAA=</HashCode>
+      <FileName>TeacherManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

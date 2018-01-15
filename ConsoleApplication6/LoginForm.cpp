@@ -1,5 +1,5 @@
 #include "LoginForm.h"
-#include "AdminForm.h"
+
 LoginForm::LoginForm()
 {
 }
@@ -94,9 +94,13 @@ void LoginForm::showadminform(UserBean user)
 
 void LoginForm::showteacherform(UserBean user)
 {
+	TeacherForm teacherform(user);
+	teacherform.show();
 }
 
 void LoginForm::showstudentform(UserBean user)
 {
+	StudentForm studentform(user);
+	studentform.show();
 }
 

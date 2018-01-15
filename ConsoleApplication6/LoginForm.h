@@ -2,6 +2,10 @@
 #include "Form.h"
 #include "UserBean.h"
 #include "File.h"
+#include "AdminForm.h"
+#include "StudentForm.h"
+#include "TeacherForm.h"
+
 class LoginForm :
 	public Form
 {

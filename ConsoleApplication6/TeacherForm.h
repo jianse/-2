@@ -6,5 +6,6 @@ class TeacherForm :
 public:
 	TeacherForm();
 	~TeacherForm();
+	void show();
 };
 
