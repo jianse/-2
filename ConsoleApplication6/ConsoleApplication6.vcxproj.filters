@@ -96,6 +96,9 @@
     <ClInclude Include="TeacherManageForm.h">
       <Filter>头文件\ui\forms\subforms</Filter>
     </ClInclude>
+    <ClInclude Include="StudentManageForm.h">
+      <Filter>头文件\ui\forms\subforms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -141,6 +144,9 @@
       <Filter>源文件\ui\forms\subforms</Filter>
     </ClCompile>
     <ClCompile Include="TeacherManageForm.cpp">
+      <Filter>源文件\ui\forms\subforms</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentManageForm.cpp">
       <Filter>源文件\ui\forms\subforms</Filter>
     </ClCompile>
   </ItemGroup>

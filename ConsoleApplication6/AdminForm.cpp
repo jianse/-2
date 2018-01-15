@@ -82,8 +82,11 @@ void AdminForm::showteachermanage()
 
 void AdminForm::showstudentmanage()
 {
+	StudentManageForm smf;
+	smf.show();
 }
 
 void AdminForm::showcoursemanage()
 {
+
 }

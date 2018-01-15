@@ -3,6 +3,7 @@
 #include "UserBean.h"
 #include "AdminManageForm.h"
 #include "TeacherManageForm.h"
+#include "StudentManageForm.h"
 
 class AdminForm :
 	public Form
