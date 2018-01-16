@@ -33,6 +33,7 @@ select a selection and press ENTER to continue:";
 			removeateacher();
 			break;
 		case'2':
+			findateacher();
 			break;
 		case'3':
 			break;
@@ -76,6 +77,7 @@ void TeacherManageForm::addateacher()
 
 void TeacherManageForm::removeateacher()
 {
+	system("cls");
 	string tid;
 	bool found = false;
 	cout << "Please input a teacher id to remove a teacher:";
@@ -97,6 +99,34 @@ void TeacherManageForm::removeateacher()
 	if (!found)
 	{
 		cout << "not found" << endl;
+		system("pause");
+	}
+}
+
+void TeacherManageForm::findateacher()
+{
+	system("cls");
+	string tid;
+	bool found = false;
+	cout << "Please input a teacher id to find a teacher:";
+	cin >> tid;
+	File teachersfile("m_tea.dat");
+	vector<TeacherBean> teachers;
+	teachers = teachersfile.loadall<vector<TeacherBean>, TeacherBean>(teachers);
+	for (vector<TeacherBean>::iterator i = teachers.begin(), e = teachers.end(); i != e; i++)
+	{
+		if (i->getid() == tid)
+		{
+			found = true;
+			i->display();
+			system("pause");
+			break;
+		}
+	}
+	if (!found)
+	{
+		cout << "not found" << endl;
+		system("pause");
 	}
 }
 

@@ -14,6 +14,7 @@ public:
 private:
 	void addateacher();
 	void removeateacher();
+	void findateacher();
 	char waitakey();
 	
 };
