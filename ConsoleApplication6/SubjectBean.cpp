@@ -78,6 +78,6 @@ ostream & operator<<(ostream & ou, SubjectBean & data)
 	{
 		ou << setw(12) <<data.teachersid[i];
 	}
-	ou << setw(3) << data.issingal << setw(3) << data.length << setw(32) << data.description;
+	ou << setw(3) << data.issingal << setw(3) << data.length << setw(32) << data.description << endl;
 	return ou;
 }

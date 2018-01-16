@@ -5,7 +5,10 @@ class TeacherBean :
 {
 public:
 	TeacherBean();
+	TeacherBean(string id, string name, string dep, string gender, string des);
 	~TeacherBean();
+	friend istream &operator >> (istream & is, TeacherBean & data);
+	friend ostream &operator << (ostream & ou, TeacherBean & data);
 	bool operator==(TeacherBean &t2);
 	TeacherBean & operator=(TeacherBean &t2);
 	bool operator== (Bean &b2);

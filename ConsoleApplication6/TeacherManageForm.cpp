@@ -27,6 +27,7 @@ select a selection and press ENTER to continue:";
 		switch (waitakey())
 		{
 		case'0':
+			addateacher();
 			break;
 		case'1':
 			break;
@@ -45,6 +46,31 @@ select a selection and press ENTER to continue:";
 			break;
 		}
 	} while (signal);
+}
+
+void TeacherManageForm::addateacher()
+{
+	string id, name, dep, gender, des;
+	cout << "id:";
+	cin >> id;
+	cout << "name:";
+	cin >> name;
+	cout << "department:";
+	cin >> dep;
+	cout << "gender:";
+	cin >> gender;
+	cout << "memo:";
+	cin >> des;
+	TeacherBean tea(id, name, dep, gender, des);
+	UserBean user(id, "123456");
+	user.setrank(1);
+	user.setsid(0);
+	File teachersfile("m_tea.dat");
+	teachersfile.write(tea);
+	File userfile("m_user.dat");
+	userfile.write(user);
+	cout << "success!" << endl;
+	system("pause");
 }
 
 char TeacherManageForm::waitakey()

@@ -6,6 +6,15 @@ TeacherBean::TeacherBean()
 {
 }
 
+TeacherBean::TeacherBean(string id, string name, string dep, string gender, string des)
+{
+	TeacherBean::id = id;
+	TeacherBean::name = name;
+	TeacherBean::department = dep;
+	TeacherBean::sex = gender;
+	TeacherBean::description = des;
+}
+
 
 TeacherBean::~TeacherBean()
 {
@@ -50,4 +59,16 @@ void TeacherBean::display()
 	cout << "depatrtent\t:" << TeacherBean::department << endl;
 	cout << "sex\t:" << TeacherBean::sex << endl;
 	cout << "memo\t:" << TeacherBean::description << endl;
+}
+
+istream & operator >> (istream & is, TeacherBean & data)
+{
+	is >> setw(12) >> data.id >> setw(10) >> data.name >> setw(20) >> data.department >> setw(3) >> data.sex >> setw(30) >> data.description;
+	return is;
+}
+
+ostream & operator<<(ostream & ou, TeacherBean & data)
+{
+	ou << setw(12) << data.id << setw(10) << data.name << setw(20) << data.department << setw(3) << data.sex << setw(30) << data.description << endl;
+	return ou;
 }
