@@ -9,6 +9,7 @@ class SubjectBean :
 {
 public:
 	SubjectBean();
+	SubjectBean(string id, string name, int teachernum, vector<string> teachersid, bool singel, int length, string des);
 	~SubjectBean();
 	friend istream &operator >> (istream & is, SubjectBean& data);
 	friend ostream &operator << (ostream & ou, SubjectBean& data);

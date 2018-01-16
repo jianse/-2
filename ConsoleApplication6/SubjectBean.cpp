@@ -6,6 +6,17 @@ SubjectBean::SubjectBean()
 {
 }
 
+SubjectBean::SubjectBean(string id, string name, int teachernum, vector<string> teachersid, bool singel, int length, string des)
+{
+	SubjectBean::id = id;
+	SubjectBean::name = name;
+	SubjectBean::teachernum = teachernum;
+	SubjectBean::teachersid = teachersid;
+	SubjectBean::issingal = singel;
+	SubjectBean::length = length;
+	SubjectBean::description = des;
+}
+
 
 SubjectBean::~SubjectBean()
 {
@@ -27,6 +38,8 @@ SubjectBean & SubjectBean::operator=(SubjectBean & s2)
 {
 	this->id = s2.id;
 	this->name = s2.name;
+	this->teachernum = s2.teachernum;
+	this->teachersid = s2.teachersid;
 	this->teacher = s2.teacher;
 	this->issingal = s2.issingal;
 	this->length = s2.length;
