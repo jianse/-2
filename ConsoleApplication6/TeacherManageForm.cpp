@@ -68,7 +68,7 @@ void TeacherManageForm::addateacher()
 	TeacherBean tea(id, name, dep, gender, des);
 	UserBean user(id, "123456");
 	user.setrank(1);
-	user.setsid(0);
+	user.setsid("0");
 	File teachersfile("m_tea.dat");
 	teachersfile.write(tea);
 	File userfile("m_user.dat");
