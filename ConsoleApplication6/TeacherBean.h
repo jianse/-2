@@ -14,6 +14,7 @@ public:
 	bool operator== (Bean &b2);
 	Bean &operator=(Bean &b2);
 	void display();
+	string getid();
 private:
 	string id;		//教师id
 	string name;	//教师姓名

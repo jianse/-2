@@ -30,6 +30,7 @@ select a selection and press ENTER to continue:";
 			addateacher();
 			break;
 		case'1':
+			removeateacher();
 			break;
 		case'2':
 			break;
@@ -71,6 +72,32 @@ void TeacherManageForm::addateacher()
 	userfile.write(user);
 	cout << "success!" << endl;
 	system("pause");
+}
+
+void TeacherManageForm::removeateacher()
+{
+	string tid;
+	bool found = false;
+	cout << "Please input a teacher id to remove a teacher:";
+	cin >> tid;
+	File teachersfile("m_tea.dat");
+	vector<TeacherBean> teachers;
+	teachers = teachersfile.loadall<vector<TeacherBean>, TeacherBean>(teachers);
+	for (vector<TeacherBean>::iterator i = teachers.begin(), e = teachers.end(); i != e; i++)
+	{
+		if (i->getid() == tid)
+		{
+			found = true;
+			teachers.erase(i);
+			cout << "success!" << endl;
+			system("pause");
+			break;
+		}
+	}
+	if (!found)
+	{
+		cout << "not found" << endl;
+	}
 }
 
 char TeacherManageForm::waitakey()

@@ -61,6 +61,11 @@ void TeacherBean::display()
 	cout << "memo\t:" << TeacherBean::description << endl;
 }
 
+string TeacherBean::getid()
+{
+	return id;
+}
+
 istream & operator >> (istream & is, TeacherBean & data)
 {
 	is >> setw(12) >> data.id >> setw(10) >> data.name >> setw(20) >> data.department >> setw(3) >> data.sex >> setw(30) >> data.description;

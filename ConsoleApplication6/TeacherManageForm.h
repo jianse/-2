@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "Form.h"
 #include "UserBean.h"
 #include "TeacherBean.h"
@@ -12,6 +13,7 @@ public:
 	void show();
 private:
 	void addateacher();
+	void removeateacher();
 	char waitakey();
 	
 };
