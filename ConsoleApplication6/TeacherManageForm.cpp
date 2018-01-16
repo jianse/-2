@@ -27,17 +27,19 @@ select a selection and press ENTER to continue:";
 		switch (waitakey())
 		{
 		case'0':
-			addateacher();
+			
 			break;
 		case'1':
-			removeateacher();
+			addateacher();
 			break;
 		case'2':
-			findateacher();
+			removeateacher();
 			break;
 		case'3':
+			findateacher();
 			break;
 		case'4':
+			modifyateacher();
 			break;
 		case'5':
 			return;
@@ -118,6 +120,47 @@ void TeacherManageForm::findateacher()
 		if (i->getid() == tid)
 		{
 			found = true;
+			i->display();
+			system("pause");
+			break;
+		}
+	}
+	if (!found)
+	{
+		cout << "not found" << endl;
+		system("pause");
+	}
+}
+
+void TeacherManageForm::modifyateacher()
+{
+	system("cls");
+	string tid;
+	bool found = false;
+	cout << "Please input a teacher id will be modifyed:";
+	cin >> tid;
+	File teachersfile("m_tea.dat");
+	vector<TeacherBean> teachers;
+	teachers = teachersfile.loadall<vector<TeacherBean>, TeacherBean>(teachers);
+	for (vector<TeacherBean>::iterator i = teachers.begin(), e = teachers.end(); i != e; i++)
+	{
+		if (i->getid() == tid)
+		{
+			found = true;
+			i->display();
+			string name, dep, gender, dsc;
+			cout << "new name:";
+			cin >> name;
+			cout << "new deprtment:";
+			cin >> dep;
+			cout << "new gender:";
+			cin >> gender;
+			cout << "new memo:";
+			cin >> dsc;
+			TeacherBean tea(i->getid(),name,dep,gender,dsc);
+			*i = tea;
+			teachersfile.override<vector<TeacherBean>,TeacherBean>(teachers);
+			cout << "success! new teacher info :" << endl;
 			i->display();
 			system("pause");
 			break;

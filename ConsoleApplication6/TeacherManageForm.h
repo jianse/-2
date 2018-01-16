@@ -15,6 +15,7 @@ private:
 	void addateacher();
 	void removeateacher();
 	void findateacher();
+	void modifyateacher();
 	char waitakey();
 	
 };
