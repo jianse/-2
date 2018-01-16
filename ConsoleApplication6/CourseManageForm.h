@@ -12,6 +12,8 @@ public:
 	void show();
 private:
 	void addacourse();
+	void removeacourse();
+	void findacourse();
 	void modifyacourse();
 	char waitakey();
 };

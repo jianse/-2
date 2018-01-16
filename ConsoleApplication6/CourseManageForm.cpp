@@ -28,13 +28,16 @@ select a selection and press ENTER to continue:";
 		switch (waitakey())
 		{
 		case '0':
-			addacourse();
+			
 			break;
 		case '1':
+			addacourse();
 			break;
 		case '2':
+			removeacourse();
 			break;
 		case '3':
+			findacourse();
 			break;
 		case '4':
 			modifyacourse();
@@ -83,9 +86,67 @@ void CourseManageForm::addacourse()
 	system("pause");
 }
 
-void CourseManageForm::modifyacourse()
+void CourseManageForm::removeacourse()
 {
 	system("cls");
+	string cid;
+	bool found = false;
+	cout << "Pleaase input a course id to remove it:";
+	cin >> cid;
+	File subjectsfile("m_sub.dat");
+	vector<SubjectBean> subjects;
+	subjects = subjectsfile.loadall<vector<SubjectBean>, SubjectBean>(subjects);
+	for (vector<SubjectBean>::iterator i = subjects.begin(), e = subjects.end(); i != e; i++)
+	{
+		if (i->getid() == cid)
+		{
+			found = true;
+			subjects.erase(i);
+			cout << "success!" << endl;
+			system("pause");
+			break;
+		}
+	}
+	if (!found)
+	{
+		cout << "not found" << endl;
+		system("pause");
+	}
+}
+
+void CourseManageForm::findacourse()
+{
+	system("cls");
+	string cid;
+	bool found = false;
+	cout << "Pleaase input a course id to find it:";
+	cin >> cid;
+	File subjectsfile("m_sub.dat");
+	vector<SubjectBean> subjects;
+	subjects = subjectsfile.loadall<vector<SubjectBean>, SubjectBean>(subjects);
+	for (vector<SubjectBean>::iterator i = subjects.begin(), e = subjects.end(); i != e; i++)
+	{
+		if (i->getid() == cid)
+		{
+			found = true;
+			i->display();
+			system("pause");
+			break;
+		}
+	}
+	if (!found)
+	{
+		cout << "not found" << endl;
+		system("pause");
+	}
+}
+
+void CourseManageForm::modifyacourse()
+{
+
+	cout << "Building.." << endl;
+	system("pause");
+	/*system("cls");
 	string sid;
 	bool found = false;
 	cout << "Please input a subject id will be modifyed:";
@@ -121,7 +182,7 @@ void CourseManageForm::modifyacourse()
 	{
 		cout << "not found" << endl;
 		system("pause");
-	}
+	}*/
 }
 
 char CourseManageForm::waitakey()
