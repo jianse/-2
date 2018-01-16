@@ -35,7 +35,7 @@ bool TeacherBean::operator==(TeacherBean & t2)
 TeacherBean & TeacherBean::operator=(TeacherBean & t2)
 {
 	this->id = t2.id;
-	this->name = t2.id;
+	this->name = t2.name;
 	this->department = t2.department;
 	this->sex = t2.sex;
 	this->description = t2.description;
