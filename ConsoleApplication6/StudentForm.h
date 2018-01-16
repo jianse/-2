@@ -17,7 +17,7 @@ private:
 	void editminfo();
 	void changepassword();
 	void selectcorse();
-	void addcouse(string cid);
+	void save();
 	void loadcourses();
 	UserBean user;
 	StudentBean m_info;

@@ -139,7 +139,8 @@ void StudentForm::selectcorse()
 			if (i->getid() == cid)
 			{
 				saveable = true;
-				addcouse(cid);
+				m_info.addsubject(cid);
+				save();
 				break;
 			}
 		}
@@ -156,10 +157,8 @@ void StudentForm::selectcorse()
 	
 }
 
-void StudentForm::addcouse(string cid)
-{
-	m_info.getscoremap().insert(make_pair(cid, -1));
-	
+void StudentForm::save()
+{	
 	vector<StudentBean> students;
 	File studentfile("m_stu.dat");
 	students = studentfile.loadall<vector<StudentBean>, StudentBean>(students);

@@ -19,6 +19,7 @@ public:
 	void display();
 	string getid();
 	map<string, double>& getscoremap();
+	void addsubject(string cid);
 private:
 
 	string id;			//Ñ§Éúid

@@ -70,6 +70,12 @@ map<string, double> & StudentBean::getscoremap()
 	return this->subjectsidandscore;
 }
 
+void StudentBean::addsubject(string cid)
+{
+	subjectcount++;
+	subjectsidandscore.insert(make_pair(cid, -1));
+}
+
 istream & operator >> (istream & is, StudentBean & data)
 {
 	is >> setw(12) >> data.id >> setw(12) >> data.name >> setw(4) >> data.gender >> setw(10) >> data.classNO >> setw(3) >> data.subjectcount;
@@ -86,9 +92,9 @@ istream & operator >> (istream & is, StudentBean & data)
 ostream & operator << (ostream & ou, StudentBean & data)
 {
 	ou << setw(12) << data.id << setw(12) << data.name << setw(4) << data.gender << setw(10) << data.classNO << setw(3) << data.subjectcount;
-	for (map<string,double>::iterator i = data.subjectsidandscore.begin(),e= data.subjectsidandscore.end(); i !=e; i++)
+	for (map<string, double>::iterator i = data.subjectsidandscore.begin(), e = data.subjectsidandscore.end(); i != e; i++)
 	{
-		ou<<setw(12) << i->first<<setw(10)<<i->second<<endl;
+		ou << setw(12) << i->first << setw(10) << i->second;
 	}
 	ou << endl;
 	return ou;
