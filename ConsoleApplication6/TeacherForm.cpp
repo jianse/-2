@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "TeacherForm.h"
 
 TeacherForm::TeacherForm(UserBean user)

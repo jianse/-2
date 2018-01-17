@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "AdminForm.h"
 
 AdminForm::AdminForm(UserBean user)
