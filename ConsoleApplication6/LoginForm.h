@@ -22,8 +22,8 @@ private:
 	void showteacherform(UserBean user);
 	void showstudentform(UserBean user);
 	string menu = 
-		"==========================================\n\
-Welcome please login \n\
+		"====================\n\
+»¶Ó­Äú ÇëÄúµÇÂ¼; \n\
 ";
 
 	

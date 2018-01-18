@@ -26,7 +26,7 @@ void StudentForm::show()
 		}
 	}
 	system("cls");
-	cout << "Welcome " << user.getname() << endl;
+	cout << "欢迎您: " << user.getname() << endl;
 	showmenu();
 }
 
@@ -34,14 +34,14 @@ void StudentForm::showmenu()
 {
 	bool signal = true;
 	do {
-		cout << "1. show my info\n\
-2. edit my info\n\
-3. change password\n\
-4. explorer score\n\
-5. select corse\n\
-6. return\n\
-0. exit \n\
-select a selection and press ENTER to continue:"; 
+		cout << "[1] 显示我的信息\n\
+[2] 修改我的信息\n\
+[3] 更改密码\n\
+[4] 查看成绩\n\
+[5] 选择课程\n\
+[6] 返回\n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:"; 
 		switch (waitakey())
 		{
 		case '0':
@@ -71,7 +71,7 @@ select a selection and press ENTER to continue:";
 			break;
 		default:
 			
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			system("pause");
 			system("cls");
 			showmenu();
@@ -91,7 +91,7 @@ char StudentForm::waitakey()
 void StudentForm::editminfo()
 {
 	system("cls");
-	cout << "Buiding..." << endl;
+	cout << "建设中..." << endl;
 	// TODO: add edit my info
 	system("pause");
 }
@@ -100,7 +100,7 @@ void StudentForm::changepassword()
 {
 	system("cls");
 	string pass;
-	cout << "Please input new password:";
+	cout << "请输入新密码:";
 	cin >> pass;
 	user.setpassword(pass);
 	File userfile("m_user.dat");
@@ -132,7 +132,7 @@ void StudentForm::selectcorse()
 		}
 		string cid;
 		bool saveable = false;
-		cout << "Please input subjectid to select a course:";
+		cout << "请输入课程ID进行选课:";
 		cin >> cid;
 		for (vector<SubjectBean>::iterator i = subjects.begin(), e = subjects.end(); i != e; i++)
 		{
@@ -146,9 +146,9 @@ void StudentForm::selectcorse()
 		}
 		if (!saveable)
 		{
-			cout << "incrrect course id" << endl;
+			cout << "不正确的课程ID" << endl;
 		}
-		cout << "0.quit anykey continue" << endl;
+		cout << "[0] 退出 其他按键继续" << endl;
 		if ('0' == waitakey())
 		{
 			signal = false;

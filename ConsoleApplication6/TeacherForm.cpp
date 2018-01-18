@@ -24,7 +24,7 @@ void TeacherForm::show()
 		}
 	}
 	system("cls");
-	cout << "Welcome " << user.getname() << endl;
+	cout << "欢迎您：" << user.getname() << endl;
 	showmenu();
 }
 
@@ -40,14 +40,14 @@ void TeacherForm::showmenu()
 	bool signal = true;
 	do {
 		system("cls");
-		cout << "1. show my info\n\
-2. edit my info\n\
-3. change password\n\
-4. course management\n\
-5. upload score\n\
-6. return\n\
-0. exit\n\
-select a selection and press ENTER to continue:";
+		cout << "[1] 显示我的信息\n\
+[2] 修改我的信息\n\
+[3] 修改密码\n\
+[4] 课程管理\n\
+[5] 上传成绩\n\
+[6] 返回\n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case '0':
@@ -84,7 +84,7 @@ select a selection and press ENTER to continue:";
 void TeacherForm::editminfo()
 {
 	system("cls");
-	cout << "Buiding..." << endl;
+	cout << "建设中..." << endl;
 	// TODO: add edit my info
 	system("pause");
 }
@@ -93,7 +93,7 @@ void TeacherForm::changepassword()
 {
 	system("cls");
 	string pass;
-	cout << "Please input new password:";
+	cout << "请输入新密码:";
 	cin >> pass;
 	user.setpassword(pass);
 	File userfile("m_user.dat");

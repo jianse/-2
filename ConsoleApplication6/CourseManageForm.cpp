@@ -18,13 +18,13 @@ void CourseManageForm::show()
 	do
 	{
 		system("cls");
-		cout << "1. add a course\n\
-2. remove a course\n\
-3. find a course info\n\
-4. edit a course info\n\
-5. return\n\
-0. exit\n\
-select a selection and press ENTER to continue:";
+		cout << "[1]. 添加一门课程\n\
+[2] 删除一门课程\n\
+[3] 查找课程\n\
+[4] 修改课程信息\n\
+[5] 返回\n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case '0':
@@ -46,7 +46,7 @@ select a selection and press ENTER to continue:";
 			return;
 			break;
 		default:
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			system("pause");
 			break;
 		}
@@ -60,29 +60,29 @@ void CourseManageForm::addacourse()
 	int teachernum, length;
 	bool singel;
 	vector<string> tids;
-	cout << "id:";
+	cout << "ID:";
 	cin >> id;
-	cout << "name:";
+	cout << "课程名:";
 	cin >> name;
-	cout << "teachernum:";
+	cout << "教师数量:";
 	cin >> teachernum;
 	for (int i = 1; i <= teachernum; i++)
 	{
 		string tid;
-		cout << "teacherid " << i << ":";
+		cout << "教师ID: " << i << ":";
 		cin >> tid;
 		tids.push_back(tid);
 	}
-	cout << "singel:";
+	cout << "单双周[0]双[1]单:";
 	cin >> singel;
-	cout << "length:";
+	cout << "学时:";
 	cin >> length;
-	cout << "memo:";
+	cout << "介绍:";
 	cin >> des;
 	SubjectBean subject(id, name, teachernum, tids, singel, length, des);
 	File subjectsfile("m_sub.dat");
 	subjectsfile.write(subject);
-	cout << "success!" << endl;
+	cout << "添加成功:" << endl;
 	system("pause");
 }
 
@@ -91,7 +91,7 @@ void CourseManageForm::removeacourse()
 	system("cls");
 	string cid;
 	bool found = false;
-	cout << "Pleaase input a course id to remove it:";
+	cout << "请输入要移除课程的ID:";
 	cin >> cid;
 	File subjectsfile("m_sub.dat");
 	vector<SubjectBean> subjects;
@@ -102,14 +102,14 @@ void CourseManageForm::removeacourse()
 		{
 			found = true;
 			subjects.erase(i);
-			cout << "success!" << endl;
+			cout << "移除成功!" << endl;
 			system("pause");
 			break;
 		}
 	}
 	if (!found)
 	{
-		cout << "not found" << endl;
+		cout << "未找到对应课程!" << endl;
 		system("pause");
 	}
 }
@@ -119,7 +119,7 @@ void CourseManageForm::findacourse()
 	system("cls");
 	string cid;
 	bool found = false;
-	cout << "Pleaase input a course id to find it:";
+	cout << "请输入要查找的课程ID:";
 	cin >> cid;
 	File subjectsfile("m_sub.dat");
 	vector<SubjectBean> subjects;
@@ -136,7 +136,7 @@ void CourseManageForm::findacourse()
 	}
 	if (!found)
 	{
-		cout << "not found" << endl;
+		cout << "未找到对应课程!" << endl;
 		system("pause");
 	}
 }
@@ -144,7 +144,7 @@ void CourseManageForm::findacourse()
 void CourseManageForm::modifyacourse()
 {
 
-	cout << "Building.." << endl;
+	cout << "建设中..." << endl;
 	system("pause");
 	/*system("cls");
 	string sid;

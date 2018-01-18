@@ -51,11 +51,16 @@ void LoginForm::show()
 					}
 					else
 					{
-						cout << "password error" << endl;
+						cout << "密码错误！" << endl;
 						system("pause");
 						break;
 					}
 				}
+			}
+			if (!contans)
+			{
+				cout << "无此用户！" << endl;
+				system("pause");
 			}
 		}
 
@@ -66,7 +71,7 @@ void LoginForm::show()
 void LoginForm::setadmin()
 {
 	string pwd;
-	cout << "before use this system you must set your admin password\n";
+	cout << "在您开始使用本系统前 您必须设置管理员密码 (默认用户名:admin):\n";
 	cin >> pwd;
 	UserBean user("admin", pwd);
 	user.setrank(0);
@@ -81,9 +86,9 @@ UserBean LoginForm::getuser()
 {
 	string username, password;
 	cout << menu;
-	cout << "UserName:";
+	cout << "用户名:";
 	cin >> username;
-	cout << "Password:";
+	cout << "密码:";
 	cin >> password;
 	UserBean user(username, password);
 	return user;

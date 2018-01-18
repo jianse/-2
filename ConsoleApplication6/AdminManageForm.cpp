@@ -17,12 +17,12 @@ void AdminManageForm::show()
 	do 
 	{
 		system("cls");
-		cout << "1. add an admin\n\
-2. delete an admin\n\
-3. find an admin\n\
-4. return \n\
-0. exit\n\
-select a selection and press ENTER to continue:";
+		cout << "[1] 添加一个管理员\n\
+[2] 移除一个管理员\n\
+[3] 查找管理员信息\n\
+[4] 返回 \n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case '0':
@@ -46,27 +46,15 @@ select a selection and press ENTER to continue:";
 				if (*i == user)
 				{
 					saveable = false;
-					cout << "already exsit!" << endl;
+					cout << "已经存在的用户！" << endl;
 					system("pause");
 					break;
 				}
 			}
-			/*while (!(userfile.in.eof()))
-			{
-				userfile.in >> luser;
-				if (user == luser)
-				{
-					saveable = false;
-					cout << "already exsit";
-
-					system("pause");
-					break;
-				}
-			}*/
 			if (saveable)
 			{
 				userfile.write(user);
-				cout << "success!" << endl;
+				cout << "添加管理员成功！" << endl;
 				system("pause");
 			}
 			break;
@@ -74,7 +62,7 @@ select a selection and press ENTER to continue:";
 		case '2':
 		{
 			string username;
-			cout << "Please input username will be deleted:";
+			cout << "请输入要移除的用户名：:";
 			cin >> username;
 			File userfile("m_user.dat");
 			vector<UserBean> users;
@@ -95,7 +83,7 @@ select a selection and press ENTER to continue:";
 		{
 			bool found = false;
 			string username;
-			cout << "Please input username:";
+			cout << "请输入要查找的用户名:";
 			cin >> username;
 			File userfile("m_user.dat");
 			UserBean user(username, "0"), luser;
@@ -112,7 +100,7 @@ select a selection and press ENTER to continue:";
 			}
 			if (!found)
 			{
-				cout << "not found" << endl;
+				cout << "未找到！" << endl;
 			}
 			system("pause");
 			break;
@@ -122,7 +110,7 @@ select a selection and press ENTER to continue:";
 			return;
 			break;
 		default:
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			system("pause");
 			break;
 		}

@@ -53,10 +53,10 @@ Bean & StudentBean::operator=(Bean & b2)
 
 void StudentBean::display()
 {
-	cout << "id\t:" << StudentBean::id << endl;
-	cout << "name\t:" << StudentBean::name << endl;
-	cout << "sex\t:" << StudentBean::gender << endl;
-	cout << "classNO\t:" << StudentBean::classNO << endl;
+	cout << "学生ID\t:" << StudentBean::id << endl;
+	cout << "姓名\t:" << StudentBean::name << endl;
+	cout << "性别\t:" << StudentBean::gender << endl;
+	cout << "班号\t:" << StudentBean::classNO << endl;
 
 }
 

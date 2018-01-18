@@ -17,13 +17,13 @@ void TeacherManageForm::show()
 	do 
 	{
 		system("cls");
-		cout << "1. add a teacher\n\
-2. remove a teacher\n\
-3. find a teacher\n\
-4. modify teacher info\n\
-5. return\n\
-0. exit\n\
-select a selection and press ENTER to continue:";
+		cout << "[1] 添加一名教师\n\
+[2] 移除一名教师\n\
+[3] 查找教师信息\n\
+[4] 修改教师信息\n\
+[5] 返回\n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case'0':
@@ -45,7 +45,7 @@ select a selection and press ENTER to continue:";
 			return;
 			break;
 		default:
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			system("pause");
 			break;
 		}
@@ -55,15 +55,15 @@ select a selection and press ENTER to continue:";
 void TeacherManageForm::addateacher()
 {
 	string id, name, dep, gender, des;
-	cout << "id:";
+	cout << "教师ID:";
 	cin >> id;
-	cout << "name:";
+	cout << "姓名:";
 	cin >> name;
-	cout << "department:";
+	cout << "部门:";
 	cin >> dep;
-	cout << "gender:";
+	cout << "性别:";
 	cin >> gender;
-	cout << "memo:";
+	cout << "简介:";
 	cin >> des;
 	TeacherBean tea(id, name, dep, gender, des);
 	UserBean user(id, "123456");
@@ -73,7 +73,7 @@ void TeacherManageForm::addateacher()
 	teachersfile.write(tea);
 	File userfile("m_user.dat");
 	userfile.write(user);
-	cout << "success!" << endl;
+	cout << "添加成功!" << endl;
 	system("pause");
 }
 
@@ -82,7 +82,7 @@ void TeacherManageForm::removeateacher()
 	system("cls");
 	string tid;
 	bool found = false;
-	cout << "Please input a teacher id to remove a teacher:";
+	cout << "请输入教师ID进行删除:";
 	cin >> tid;
 	File teachersfile("m_tea.dat");
 	vector<TeacherBean> teachers;
@@ -93,14 +93,14 @@ void TeacherManageForm::removeateacher()
 		{
 			found = true;
 			teachers.erase(i);
-			cout << "success!" << endl;
+			cout << "删除成功!" << endl;
 			system("pause");
 			break;
 		}
 	}
 	if (!found)
 	{
-		cout << "not found" << endl;
+		cout << "未找到！" << endl;
 		system("pause");
 	}
 }
@@ -110,7 +110,7 @@ void TeacherManageForm::findateacher()
 	system("cls");
 	string tid;
 	bool found = false;
-	cout << "Please input a teacher id to find a teacher:";
+	cout << "请输入要查询的教师ID:";
 	cin >> tid;
 	File teachersfile("m_tea.dat");
 	vector<TeacherBean> teachers;
@@ -127,7 +127,7 @@ void TeacherManageForm::findateacher()
 	}
 	if (!found)
 	{
-		cout << "not found" << endl;
+		cout << "未找到！" << endl;
 		system("pause");
 	}
 }
@@ -137,7 +137,7 @@ void TeacherManageForm::modifyateacher()
 	system("cls");
 	string tid;
 	bool found = false;
-	cout << "Please input a teacher id will be modifyed:";
+	cout << "请输入要修改的教师ID：";
 	cin >> tid;
 	File teachersfile("m_tea.dat");
 	vector<TeacherBean> teachers;
@@ -149,18 +149,18 @@ void TeacherManageForm::modifyateacher()
 			found = true;
 			i->display();
 			string name, dep, gender, dsc;
-			cout << "new name:";
+			cout << "新姓名:";
 			cin >> name;
-			cout << "new deprtment:";
+			cout << "新部门:";
 			cin >> dep;
-			cout << "new gender:";
+			cout << "新性别:";
 			cin >> gender;
-			cout << "new memo:";
+			cout << "新简介:";
 			cin >> dsc;
 			TeacherBean tea(i->getid(),name,dep,gender,dsc);
 			*i = tea;
 			teachersfile.override<vector<TeacherBean>,TeacherBean>(teachers);
-			cout << "success! new teacher info :" << endl;
+			cout << "修改成功 新信息如下:" << endl;
 			i->display();
 			system("pause");
 			break;
@@ -168,7 +168,7 @@ void TeacherManageForm::modifyateacher()
 	}
 	if (!found)
 	{
-		cout << "not found" << endl;
+		cout << "未找到！" << endl;
 		system("pause");
 	}
 }

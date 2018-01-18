@@ -17,13 +17,13 @@ void StudentManageForm::show()
 	do 
 	{
 		system("cls");
-		cout << "1. add a student\n\
-2. remove a student\n\
-3. find a student\n\
-4. modify a student info\n\
-5. return\n\
-0. exit\n\
-select a selection and press ENTER to continue:";
+		cout << "[1] 添加一名学生\n\
+[2] 删除一名学生\n\
+[3] 查找学生信息\n\
+[4] 修改学生信息\n\
+[5] 返回\n\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case '0':
@@ -31,7 +31,6 @@ select a selection and press ENTER to continue:";
 		case '1':
 			system("cls");
 			addastudent();
-			
 			break;
 		case '2':
 			break;
@@ -43,7 +42,7 @@ select a selection and press ENTER to continue:";
 			return;
 			break;
 		default:
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			system("pause");
 			break;
 		}
@@ -61,13 +60,13 @@ void StudentManageForm::addastudent()
 {
 	bool saveable = true;
 	string id, name, gender, classNO;
-	cout << "id:";
+	cout << "学生ID:";
 	cin >> id;
-	cout << "name:";
+	cout << "姓名:";
 	cin >> name;
-	cout << "gender:";
+	cout << "性别:";
 	cin >> gender;
-	cout << "calssNO:";
+	cout << "班号:";
 	cin >> classNO;
 
 	StudentBean stu(id, name, gender, classNO);
@@ -83,7 +82,7 @@ void StudentManageForm::addastudent()
 		if (i->getname() == id)
 		{
 			saveable = false;
-			cout << "already exsit!" << endl;
+			cout << "已经存在的学生信息！" << endl;
 			system("pause");
 			break;
 		}
@@ -94,7 +93,7 @@ void StudentManageForm::addastudent()
 		user.write(u);
 		File studentsfile("m_stu.dat");
 		studentsfile.write(stu);
-		cout << "success!" << endl;
+		cout << "创建成功！" << endl;
 		user.close();
 		studentsfile.close();
 		system("pause");

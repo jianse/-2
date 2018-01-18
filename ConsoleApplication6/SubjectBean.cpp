@@ -60,10 +60,10 @@ Bean & SubjectBean::operator=(Bean & b2)
 
 void SubjectBean::display()
 {
-	cout << "id\t:" << SubjectBean::id << endl;
-	cout << "name:\t:" << SubjectBean::name << endl;
-	cout << "teacher\t:" << endl;
-	cout << "memo\t:" << SubjectBean::description << endl;
+	cout << "¿Î³ÌID:\t:" << SubjectBean::id << endl;
+	cout << "¿Î³ÌÃû\t:" << SubjectBean::name << endl;
+	//cout << "teacher\t:" << endl;
+	cout << "¼ò½é\t:" << SubjectBean::description << endl;
 }
 
 string SubjectBean::getid()

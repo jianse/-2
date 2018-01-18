@@ -13,7 +13,7 @@ AdminForm::~AdminForm()
 void AdminForm::show()
 {
 	system("cls");
-	cout <<"Welcome "<< user.getname()<<endl;
+	cout <<"欢迎您："<< user.getname()<<endl;
 	showmenu();
 }
 
@@ -21,13 +21,14 @@ void AdminForm::showmenu()
 {
 	bool signal = true;
 	do {
-		cout << "1. admin management \n\
-2. teacher management \n\
-3. student management \n\
-4. course managemnet \n\
-5. change password \n\
-0. exit \n\
-select a selection and press ENTER to continue:";
+		cout << "[1] 管理员管理\n\
+[2] 教师管理 \n\
+[3] 学生管理 \n\
+[4] 课程管理 \n\
+[5] 修改密码 \n\
+[6] 返回\
+[0] 退出\n\
+选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
 		{
 		case '0':
@@ -52,7 +53,7 @@ select a selection and press ENTER to continue:";
 			break;
 		default:
 			system("cls");
-			cout << "undifined selection please retry" << endl;
+			cout << "未定义的选项 请重试" << endl;
 			showmenu();
 			break;
 		}

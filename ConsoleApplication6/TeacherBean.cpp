@@ -54,11 +54,11 @@ Bean & TeacherBean::operator=(Bean & b2)
 
 void TeacherBean::display()
 {
-	cout << "id\t:" << TeacherBean::id << endl;
-	cout << "name\t:" << TeacherBean::name << endl;
-	cout << "depatrtent\t:" << TeacherBean::department << endl;
-	cout << "sex\t:" << TeacherBean::sex << endl;
-	cout << "memo\t:" << TeacherBean::description << endl;
+	cout << "教师ID\t:" << TeacherBean::id << endl;
+	cout << "姓名\t:" << TeacherBean::name << endl;
+	cout << "部门\t:" << TeacherBean::department << endl;
+	cout << "性别\t:" << TeacherBean::sex << endl;
+	cout << "简介\t:" << TeacherBean::description << endl;
 }
 
 string TeacherBean::getid()
