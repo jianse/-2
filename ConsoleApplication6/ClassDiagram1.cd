@@ -10,33 +10,33 @@
   <Class Name="UserBean">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQQAAAAAAAVAEBSEAAAEAAAAAAAAgAgQABAA=</HashCode>
+      <HashCode>AAAAAAAAQQAAAAAAAVAEBSEAAAEAAAAAAAAgggQABAA=</HashCode>
       <FileName>UserBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentBean">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAEAAAAAAAAAAAAAEgQgAQAAAAEEAAAAAAAgAAIAAgA=</HashCode>
+      <HashCode>RAEBAAAAAAAAAAAAEgAggQAAAAEkAAAAAAAgAAIAAgA=</HashCode>
       <FileName>StudentBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SubjectBean">
     <Position X="4.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABEBAAAAAAAAAAAAIEAAAQAAAAFEAAAAAAAgAAABAgA=</HashCode>
+      <HashCode>ABEBAAAAAAAAAAAAIEAAAQAAAAFEAAAAAAAgAAIJAgA=</HashCode>
       <FileName>SubjectBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherBean">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAIAQAAQAYAAEEAAAAAAAgAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAIAQAAQAYAAEEAAAAAAAgAAIAAgA=</HashCode>
       <FileName>TeacherBean.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Form">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAEAAAA=</HashCode>
       <FileName>Form.h</FileName>
@@ -52,14 +52,14 @@
   <Class Name="TeacherForm">
     <Position X="12.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAEAQA=</HashCode>
+      <HashCode>AAAAAAAQAAAAgAABAAEAAAAAAgACgAAABAAAAAAEBQA=</HashCode>
       <FileName>TeacherForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentForm">
     <Position X="14.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAABCAAAACABQA=</HashCode>
+      <HashCode>IAAAAAAQAACAgAEAAAEAAAAAAgAAAAAABCAAAACABQA=</HashCode>
       <FileName>StudentForm.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,45 +71,75 @@
     </TypeIdentifier>
   </Class>
   <Class Name="File">
-    <Position X="18" Y="2.25" Width="1.5" />
+    <Position X="17.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIEAAAAAAAAAAAAACAAEBAAAECAIAAYAAAAAAQAA=</HashCode>
+      <HashCode>AAAAIEAAAAAAAAEAAAACAAEBAAAECAAAAYAAAAAAQAA=</HashCode>
       <FileName>File.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AdminManageForm">
-    <Position X="15.5" Y="6.25" Width="1.5" />
+    <Position X="14.5" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Form" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="1.94" />
+        <Point X="12.25" Y="2.2" />
+        <Point X="14.26" Y="2.2" />
+        <Point X="14.26" Y="7.125" />
+        <Point X="14.5" Y="7.125" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAIAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>AdminManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CourseManageForm">
-    <Position X="11.5" Y="6.25" Width="1.5" />
+    <Position X="8.5" Y="5.75" Width="1.5" />
     <InheritanceLine Type="Form" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="12.5" Y="1.94" />
-        <Point X="12.5" Y="2.2" />
+        <Point X="12.25" Y="1.94" />
         <Point X="12.25" Y="2.2" />
-        <Point X="12.25" Y="6.25" />
+        <Point X="10.262" Y="2.2" />
+        <Point X="10.262" Y="5.555" />
+        <Point X="9.25" Y="5.555" />
+        <Point X="9.25" Y="5.75" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAgAAAEgAAAAAIBBAAAAAAAAA=</HashCode>
       <FileName>CourseManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StudentManageForm">
-    <Position X="9.5" Y="6.25" Width="1.5" />
+    <Position X="12.5" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Form" ManuallyRouted="true">
+      <Path>
+        <Point X="12.25" Y="1.94" />
+        <Point X="12.25" Y="2.2" />
+        <Point X="12.242" Y="2.2" />
+        <Point X="12.242" Y="5.95" />
+        <Point X="13.25" Y="5.95" />
+        <Point X="13.25" Y="6.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAgAAAAAABAAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAgAAAQAABAAAAAQAAAA=</HashCode>
       <FileName>StudentManageForm.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeacherManageForm">
-    <Position X="13.5" Y="6.25" Width="1.5" />
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="Form" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="1.94" />
+        <Point X="12.25" Y="2.2" />
+        <Point X="12.242" Y="2.2" />
+        <Point X="12.242" Y="7" />
+        <Point X="12" Y="7" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABCAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAAAAAAAgAAAAAAAAAAAAgAAAKAABCAAAAAAAAA=</HashCode>
       <FileName>TeacherManageForm.h</FileName>
     </TypeIdentifier>
   </Class>

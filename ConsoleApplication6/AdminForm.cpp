@@ -26,7 +26,7 @@ void AdminForm::showmenu()
 [3] 学生管理 \n\
 [4] 课程管理 \n\
 [5] 修改密码 \n\
-[6] 返回\
+[6] 返回\n\
 [0] 退出\n\
 选择您要进行的操作按 ENTER 继续:";
 		switch (waitakey())
