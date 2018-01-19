@@ -122,9 +122,6 @@
     <ClCompile Include="AdminForm.cpp">
       <Filter>源文件\ui\forms</Filter>
     </ClCompile>
-    <ClCompile Include="Form.cpp">
-      <Filter>源文件\ui\forms</Filter>
-    </ClCompile>
     <ClCompile Include="LoginForm.cpp">
       <Filter>源文件\ui\forms</Filter>
     </ClCompile>

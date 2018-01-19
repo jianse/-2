@@ -169,7 +169,6 @@
     <ClCompile Include="CourseManageForm.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="File.cpp" />
-    <ClCompile Include="Form.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="StudentBean.cpp" />
     <ClCompile Include="StudentForm.cpp" />
